@@ -102,12 +102,18 @@ public class Others_03_WishlistAndCompare extends AbstractTest {
 		shoppingCartPage = PageGeneratorManager.getShoppingCartPage(driver);
 		verifyEquals(shoppingCartPage.getNopCommerceProductNameByText(driver, productName), productName);
 
-		log.info("TC_02_AddProductToCartFromWishlistPage - Step 05: Click to 'WishList' link again");
+		log.info("TC_02_AddProductToCartFromWishlistPage - Step 05: Clear product from Shopping Cart after adding from WishList");
+		shoppingCartPage.clickToNopCommerceProductButtonIconByColumn(driver, productName,7);
+		verifyTrue(shoppingCartPage.isNopCommerceProductUndisplayed(driver, productName));
+
+		log.info("TC_02_AddProductToCartFromWishlistPage - Step 06: Click to 'WishList' link again");
 		shoppingCartPage.clickToNopCommerceHeaderOtherLinkByText(driver, "Wishlist");
 		wishListPage = PageGeneratorManager.getWishListPage(driver);
 
-		log.info("TC_02_AddProductToCartFromWishlistPage - Step 06: Verify Product is removed from WishList page");
+		log.info("TC_02_AddProductToCartFromWishlistPage - Step 07: Verify Product is removed from WishList page");
 		verifyTrue(wishListPage.isNopCommerceProductUndisplayed(driver, productName));
+
+
 	}
 
 	@Test(dependsOnMethods = "TC_02_AddProductToCartFromWishlistPage")
@@ -137,6 +143,8 @@ public class Others_03_WishlistAndCompare extends AbstractTest {
 		log.info("TC_03_RemoveProductInWishlistPage - Step 07: Verify Product is removed from WishList page");
 		verifyEquals(wishListPage.getWishListWarningMsgByClass("no-data"), "The wishlist is empty!");
 		verifyTrue(wishListPage.isNopCommerceProductUndisplayed(driver, productName1));
+
+
 	}
 
 	@Test(dependsOnMethods = "TC_03_RemoveProductInWishlistPage")

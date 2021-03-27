@@ -6,7 +6,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageUIs.nopcommerce.AbstractPageNopCommerceUI;
-import pageUIs.nopcommerce.CompareProductsListUI;
 
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
@@ -166,7 +165,7 @@ public class AbstractPage {
 	}
 
 	public void unCheckTheCheckbox(WebDriver driver, String locator, String... values) {
-		element = findElementByXpath(driver, locator);
+		element = findElementByXpath(driver, locator, values);
 		if (element.isSelected()) {
 			element.click();
 		}
@@ -605,6 +604,20 @@ public class AbstractPage {
 		sleepInSecond(driver, 1);
 	}
 
+	public void setAttributeValueByJS(WebDriver driver, String locator, String attributeSet, String textValue) {
+		jsExecutor = (JavascriptExecutor) driver;
+		element = findElementByXpath(driver, locator);
+		jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, attributeSet, textValue);
+		sleepInSecond(driver, 1);
+	}
+
+	public void setAttributeValueByJS(WebDriver driver, String locator, String attributeSet, String textValue, String... values) {
+		jsExecutor = (JavascriptExecutor) driver;
+		element = findElementByXpath(driver, locator, values);
+		jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, attributeSet, textValue);
+		sleepInSecond(driver, 1);
+	}
+
 	public boolean verifyTextInInnerTextByJS(WebDriver driver, String textExpected) {
 		jsExecutor = (JavascriptExecutor) driver;
 		String textActual = (String) jsExecutor.executeScript("return document.documentElement.innerText.match('" + textExpected + "')[0]");
@@ -920,4 +933,36 @@ public class AbstractPage {
 		return getTextElement(driver, locator, textValue);
 	}
 
+	public void unCheckOnNopCommerceCheckboxByText(WebDriver driver, String textValue) {
+		waitForElementVisible(driver, AbstractPageNopCommerceUI.DYNAMIC_CHECKBOX_BY_LABEL, textValue);
+		unCheckTheCheckbox(driver, AbstractPageNopCommerceUI.DYNAMIC_CHECKBOX_BY_LABEL, textValue);
+	}
+
+	public String getNopCommerceProductQtyByColumn(WebDriver driver, String productName, int columnNumber) {
+		overrideGlobalTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
+		index = findElementsByXpath(driver, AbstractPageNopCommerceUI.DYNAMIC_PRODUCT_INFOR, productName).size() + 1;
+		overrideGlobalTimeout(driver, GlobalConstants.LONG_TIMEOUT);
+		locator = "//tbody/tr[" + index + "]/td[" + columnNumber + "]/input";
+		waitForElementVisible(driver, locator);
+		return getAttributeValue(driver, locator, "value");
+	}
+
+	public void clickToNopCommerceProductButtonIconByColumn(WebDriver driver, String productName, int columnNumber) {
+		overrideGlobalTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
+		index = findElementsByXpath(driver, AbstractPageNopCommerceUI.DYNAMIC_PRODUCT_INFOR, productName).size() + 1;
+		overrideGlobalTimeout(driver, GlobalConstants.LONG_TIMEOUT);
+		locator = "//tbody/tr[" + index + "]/td[" + columnNumber + "]/button";
+		waitForElementClickable(driver, locator);
+		clickToElement(driver, locator);
+	}
+
+	 public void inputNopcommerceProductQuantity(WebDriver driver, String qty){
+		waitForElementVisible(driver, AbstractPageNopCommerceUI.QUANTITY_TEXTBOX);
+		setAttributeValueByJS(driver, AbstractPageNopCommerceUI.QUANTITY_TEXTBOX,"value", qty);
+    }
+
+	public void setNopCommerceValueForTextBoxByID(WebDriver driver, String idValue, String textValue) {
+		waitForElementVisible(driver, AbstractPageNopCommerceUI.DYNAMIC_TEXTBOX, idValue);
+		setAttributeValueByJS(driver, AbstractPageNopCommerceUI.DYNAMIC_TEXTBOX, "value", textValue, idValue);
+	}
 }

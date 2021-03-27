@@ -65,8 +65,11 @@ public class AbstractPageNopCommerceUI {
 	public static final String DYNAMIC_PRODUCT_INFOR = "//tbody//td[@class = 'product']/a[text() = '%s']//ancestor::tr/preceding-sibling::tr";
 
 	//Sub Button
-	public static final String DYNAMIC_SUB_BUTTON = "//a[text() = '%s']/parent::h2//following-sibling::div[@class = 'add-info']//button[@title = '%s']";
-	
+	//public static final String DYNAMIC_SUB_BUTTON = "//a[text() = '%s']/parent::h2//following-sibling::div[@class = 'add-info']//button[@title = '%s']";
+	public static final String DYNAMIC_SUB_BUTTON = "//a[text() = '%s']/parent::h2//following-sibling::div[@class = 'add-info']//button[text() = '%s']";
+
 	//Product Item infor
 	public static final String DYNAMIC_PRODUCT_ITEM_INFOR = "//a[text() = '%s']/parent::td//following-sibling::td[@class = '%s']";
+
+	public static final String QUANTITY_TEXTBOX = "//div//input[@class = 'qty-input']";
 }

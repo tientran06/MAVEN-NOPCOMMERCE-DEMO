@@ -64,4 +64,7 @@ public class PageGeneratorManager {
 		return new DesktopsPageObject(driver);
 	}
 
+	public static CheckOutPageObject getCheckOutPage(WebDriver driver) {
+		return new CheckOutPageObject(driver);
+	}
 }
