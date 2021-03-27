@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on CHROME"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="143.759">
+  <properties />
+  
+  
+            <testcase name="TC_04_AddProductToCompareAndClearList" time="28.192" classname="com.nopcommerce.others.Others_03_WishlistAndCompare" />
+                <testcase name="TC_05_RecentlyViewedProducts" time="32.386" classname="com.nopcommerce.others.Others_03_WishlistAndCompare" />
+                <testcase name="TC_06_AddProductToCompareAndRemove" time="49.892" classname="com.nopcommerce.others.Others_03_WishlistAndCompare" />
+                <testcase name="TC_01_AddToWishlist" time="4.565" classname="com.nopcommerce.others.Others_03_WishlistAndCompare" />
+                <testcase name="TC_02_AddProductToCartFromWishlistPage" time="14.132" classname="com.nopcommerce.others.Others_03_WishlistAndCompare" />
+                <testcase name="TC_03_RemoveProductInWishlistPage" time="14.592" classname="com.nopcommerce.others.Others_03_WishlistAndCompare" />
+      
+</testsuite>

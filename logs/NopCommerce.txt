@@ -1,0 +1,251 @@
+[INFO ] [2021-03-27 23:42:13,148]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:42:27,320] TC_01_RegisterWithEmptyData - Step 01: Input value
+[INFO ] [2021-03-27 23:42:28,835] TC_01_RegisterWithEmptyData - Step 02: Click to 'Register' button
+[INFO ] [2021-03-27 23:42:29,106] TC_01_RegisterWithEmptyData - Step 03: Verify validation error message displays
+[INFO ] [2021-03-27 23:42:29,223]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:42:29,317]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:42:29,451]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:42:29,551]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:42:29,655]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:42:31,357] TC_02_RegisterWithInvalidEmail - Step 01: Input value
+[INFO ] [2021-03-27 23:42:33,850] TC_02_RegisterWithInvalidEmail - Step 02: Click to 'Register' button
+[INFO ] [2021-03-27 23:42:34,007] TC_02_RegisterWithInvalidEmail - Step 03: Verify validation error message displays
+[INFO ] [2021-03-27 23:42:34,100]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:42:34,967] TC_03_RegisterWithExistEmail - Step 01: Input value
+[INFO ] [2021-03-27 23:42:37,653] TC_03_RegisterWithExistEmail - Step 02: Click to 'Register' button
+[INFO ] [2021-03-27 23:42:39,479] TC_03_RegisterWithExistEmail - Step 03: Verify validation error message displays
+[INFO ] [2021-03-27 23:42:39,599]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:42:41,203] TC_04_RegisterWithInvalidPass - Step 01: Input value
+[INFO ] [2021-03-27 23:42:43,487] TC_04_RegisterWithInvalidPass - Step 02: Click to 'Register' button
+[INFO ] [2021-03-27 23:42:43,621] TC_04_RegisterWithInvalidPass - Step 03: Verify validation error message displays
+[INFO ] [2021-03-27 23:42:43,691]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:42:43,758]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:42:45,180] TC_05_RegisterWithInvalidConfirmPass - Step 01: Input value
+[INFO ] [2021-03-27 23:42:47,303] TC_05_RegisterWithInvalidConfirmPass - Step 02: Click to 'Register' button
+[INFO ] [2021-03-27 23:42:47,541] TC_05_RegisterWithInvalidConfirmPass - Step 03: Verify validation error message displays
+[INFO ] [2021-03-27 23:42:47,656]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:42:49,174] TC_06_RegisterToSystem - Step 01: Input value
+[INFO ] [2021-03-27 23:42:51,040] TC_06_RegisterToSystem - Step 02: Click to 'Register' button
+[INFO ] [2021-03-27 23:42:52,876] TC_06_RegisterToSystem - Step 03: Verify successful message displays
+[INFO ] [2021-03-27 23:42:53,005]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:42:54,952] OS Name = windows 10
+[INFO ] [2021-03-27 23:42:56,297] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-03-27 23:43:04,417] TC_01_LoginWithEmptyData - Step 01: Input value
+[INFO ] [2021-03-27 23:43:04,922] TC_01_LoginWithEmptyData - Step 02: Click to Log in button
+[INFO ] [2021-03-27 23:43:05,063] TC_01_LoginWithEmptyData - Step 03: Verify Error message displays
+[INFO ] [2021-03-27 23:43:05,156]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:06,669] TC_02_LoginWithInvalidEmail - Step 01: Input value
+[INFO ] [2021-03-27 23:43:07,695] TC_02_LoginWithInvalidEmail - Step 02: Click to Log in button
+[INFO ] [2021-03-27 23:43:07,888] TC_02_LoginWithInvalidEmail - Step 03: Verify Error message displays
+[INFO ] [2021-03-27 23:43:08,040]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:09,053] TC_03_LoginWithIncorrectEmail - Step 01: Input value
+[INFO ] [2021-03-27 23:43:09,840] TC_03_LoginWithIncorrectEmail - Step 02: Click to Log in button
+[INFO ] [2021-03-27 23:43:11,276] TC_03_LoginWithIncorrectEmail - Step 03: Verify Validation message displays
+[INFO ] [2021-03-27 23:43:11,409]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:11,522]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:12,965] TC_04_LoginWithEmptyPass - Step 01: Input value
+[INFO ] [2021-03-27 23:43:13,608] TC_04_LoginWithEmptyPass - Step 02: Click to Log in button
+[INFO ] [2021-03-27 23:43:15,174] TC_04_LoginWithEmptyPass - Step 03: Verify Validation message displays
+[INFO ] [2021-03-27 23:43:15,288]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:15,379]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:16,944] TC_05_LoginWithWrongPass - Step 01: Input value
+[INFO ] [2021-03-27 23:43:17,527] TC_05_LoginWithWrongPass - Step 02: Click to Log in button
+[INFO ] [2021-03-27 23:43:18,404] TC_05_LoginWithWrongPass - Step 03: Verify Validation message displays
+[INFO ] [2021-03-27 23:43:18,513]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:18,593]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:20,172] TC_06_LoginToTheSystem - Step 01: Input value
+[INFO ] [2021-03-27 23:43:20,749] TC_06_LoginToTheSystem - Step 02: Click to Log in button
+[INFO ] [2021-03-27 23:43:21,971] TC_06_LoginToTheSystem - Step 03: Verify succesfull message displays
+[INFO ] [2021-03-27 23:43:22,086]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:23,175] OS Name = windows 10
+[INFO ] [2021-03-27 23:43:24,664] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-03-27 23:43:30,881] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-03-27 23:43:36,553]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:37,741] TC_01_SearchWithEmptyData - Step 01: Input Search text with empty data
+[INFO ] [2021-03-27 23:43:37,959] TC_01_SearchWithEmptyData - Step 02: Click Search button
+[INFO ] [2021-03-27 23:43:39,606] TC_01_SearchWithEmptyData - Step 03: Verify Error message displays
+[INFO ] [2021-03-27 23:43:39,759]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:41,721] TC_02_SearchWithNotExistData - Step 01: Input Search text with not exist data
+[INFO ] [2021-03-27 23:43:42,157] TC_02_SearchWithNotExistData - Step 02: Click Search button
+[INFO ] [2021-03-27 23:43:43,755] TC_02_SearchWithNotExistData - Step 03: Verify displayed result - No result
+[INFO ] [2021-03-27 23:43:43,860]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:45,449] TC_03_SearchWithProductNameRelative - Step 01: Input Search text with comparative Product Name
+[INFO ] [2021-03-27 23:43:45,666] TC_03_SearchWithProductNameRelative - Step 02: Click Search button
+[INFO ] [2021-03-27 23:43:47,501] TC_03_SearchWithProductNameRelative - Step 03: Verify displayed result - 2 related Products
+[INFO ] [2021-03-27 23:43:47,601] Total product is found: ---------------2
+[INFO ] [2021-03-27 23:43:47,629]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:49,201] TC_04_SearchWithProductNameAbsolutely - Step 01: Input Search text with absolute Product Name
+[INFO ] [2021-03-27 23:43:49,488] TC_04_SearchWithProductNameAbsolutely - Step 02: Click Search button
+[INFO ] [2021-03-27 23:43:50,514] TC_04_SearchWithProductNameAbsolutely - Step 03: Verify displayed result - 1 Product
+[INFO ] [2021-03-27 23:43:50,613] Total product is found: ---------------1
+[INFO ] [2021-03-27 23:43:50,682]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:52,309] TC_05_AdvancedSearchWithParentCategories - Step 01: Input Search text with Product Name
+[INFO ] [2021-03-27 23:43:52,730] TC_05_AdvancedSearchWithParentCategories - Step 02: Check on Advanced Search and select option Category
+[INFO ] [2021-03-27 23:43:53,056] TC_05_AdvancedSearchWithParentCategories - Step 03: Click Search button
+[INFO ] [2021-03-27 23:43:54,658] TC_05_AdvancedSearchWithParentCategories - Step 04: Verify displayed result - No result
+[INFO ] [2021-03-27 23:43:54,760]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:55,639] TC_06_AdvancedSearchWithSubCategories - Step 01: Input Search text with Product Name
+[INFO ] [2021-03-27 23:43:55,904] TC_06_AdvancedSearchWithSubCategories - Step 02: Check on 'Advanced Search' and select option 'Category'
+[INFO ] [2021-03-27 23:43:56,273] TC_06_AdvancedSearchWithSubCategories - Step 03: Check on 'Automatically search sub categories'
+[INFO ] [2021-03-27 23:43:56,446] TC_06_AdvancedSearchWithSubCategories - Step 04: Click Search button
+[INFO ] [2021-03-27 23:43:58,064] TC_06_AdvancedSearchWithSubCategories - Step 05: Verify displayed result - 1 Product
+[INFO ] [2021-03-27 23:43:58,099] Total product is found: ---------------1
+[INFO ] [2021-03-27 23:43:58,132]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:43:59,641] TC_07_AdvancedSearchWithIncorrectManufacturer - Step 01: Input Search text with Product Name
+[INFO ] [2021-03-27 23:43:59,903] TC_07_AdvancedSearchWithIncorrectManufacturer - Step 02: Check on 'Advanced Search' and select option 'Category'
+[INFO ] [2021-03-27 23:44:00,252] TC_07_AdvancedSearchWithIncorrectManufacturer - Step 03: Check on 'Automatically search sub categories'
+[INFO ] [2021-03-27 23:44:00,428] TC_07_AdvancedSearchWithIncorrectManufacturer - Step 04: Select incorrect 'Manufacturer'
+[INFO ] [2021-03-27 23:44:00,545] TC_07_AdvancedSearchWithIncorrectManufacturer - Step 05: Click Search button
+[INFO ] [2021-03-27 23:44:01,271] TC_07_AdvancedSearchWithIncorrectManufacturer - Step 06: Verify displayed result - No result
+[INFO ] [2021-03-27 23:44:01,357]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:44:03,099] TC_08_AdvancedSearchWithCorrectManufacturer - Step 01: Input Search text with Product Name
+[INFO ] [2021-03-27 23:44:03,423] TC_08_AdvancedSearchWithCorrectManufacturer - Step 02: Check on 'Advanced Search' and select option 'Category'
+[INFO ] [2021-03-27 23:44:03,683] TC_08_AdvancedSearchWithCorrectManufacturer - Step 03: Check on 'Automatically search sub categories'
+[INFO ] [2021-03-27 23:44:03,793] TC_08_AdvancedSearchWithCorrectManufacturer - Step 04: Select incorrect 'Manufacturer'
+[INFO ] [2021-03-27 23:44:03,899] TC_08_AdvancedSearchWithCorrectManufacturer - Step 05: Click Search button
+[INFO ] [2021-03-27 23:44:04,726] TC_08_AdvancedSearchWithCorrectManufacturer - Step 06: Verify displayed result - 1 Product
+[INFO ] [2021-03-27 23:44:04,764] Total product is found: ---------------1
+[INFO ] [2021-03-27 23:44:04,799]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:44:04,807] OS Name = windows 10
+[INFO ] [2021-03-27 23:44:06,170] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-03-27 23:44:12,703] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-03-27 23:44:17,210]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:44:19,177] TC_01_AddToWishlist - Step 01: Click to 'Sub Menu'
+[INFO ] [2021-03-27 23:44:21,507] TC_01_AddToWishlist - Step 02: Click to 'Add to wishlist' button
+[INFO ] [2021-03-27 23:44:22,705] TC_01_AddToWishlist - Step 03: Verify successful Message displays
+[INFO ] [2021-03-27 23:44:22,818]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:44:22,818] TC_01_AddToWishlist - Step 04: Go to WishList Page
+[INFO ] [2021-03-27 23:44:24,459] TC_01_AddToWishlist - Step 05: Verify Product is added into WishList page
+[INFO ] [2021-03-27 23:44:24,557]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:44:24,559] TC_01_AddToWishlist - Step 06: Click to WishList share link
+[INFO ] [2021-03-27 23:44:26,069] TC_01_AddToWishlist - Step 07: Verify Product is in User's WishList
+[INFO ] [2021-03-27 23:44:26,184]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:44:26,270]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:44:28,276] TC_02_AddProductToCartFromWishlistPage - Step 01: Click to 'Wishlist' Link
+[INFO ] [2021-03-27 23:44:29,297] TC_02_AddProductToCartFromWishlistPage - Step 02: Check on checkbox 'Add to cart'
+[INFO ] [2021-03-27 23:44:29,456] TC_02_AddProductToCartFromWishlistPage - Step 03: Click on 'Add to cart' button
+[INFO ] [2021-03-27 23:44:30,769] TC_02_AddProductToCartFromWishlistPage - Step 04: Verify Product add to Shopping Cart successfully
+[INFO ] [2021-03-27 23:44:30,921]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:44:30,927] TC_02_AddProductToCartFromWishlistPage - Step 05: Clear product from Shopping Cart after adding from WishList
+[INFO ] [2021-03-27 23:44:41,614]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:44:41,614] TC_02_AddProductToCartFromWishlistPage - Step 06: Click to 'WishList' link again
+[INFO ] [2021-03-27 23:44:43,028] TC_02_AddProductToCartFromWishlistPage - Step 07: Verify Product is removed from WishList page
+[INFO ] [2021-03-27 23:44:49,096]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:44:51,077] TC_03_RemoveProductInWishlistPage - Step 01: Click to 'Sub Menu'
+[INFO ] [2021-03-27 23:44:53,712] TC_03_RemoveProductInWishlistPage - Step 02: Click to 'Add to wishlist' button
+[INFO ] [2021-03-27 23:44:54,920] TC_03_RemoveProductInWishlistPage - Step 03: Verify successful Message displays
+[INFO ] [2021-03-27 23:44:55,015]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:44:55,016] TC_03_RemoveProductInWishlistPage - Step 04: Go to WishList Page
+[INFO ] [2021-03-27 23:44:56,489] TC_03_RemoveProductInWishlistPage - Step 05: Verify Product is added into WishList page
+[INFO ] [2021-03-27 23:44:56,622]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:44:56,624] TC_03_RemoveProductInWishlistPage - Step 06: Remove product from Wishlist
+[INFO ] [2021-03-27 23:44:58,028] TC_03_RemoveProductInWishlistPage - Step 07: Verify Product is removed from WishList page
+[INFO ] [2021-03-27 23:44:58,114]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:04,191]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:05,600] TC_04_AddProductToCompareAndClearList - Step 01: Click to 'Sub Menu'
+[INFO ] [2021-03-27 23:45:07,158] TC_04_AddProductToCompareAndClearList - Step 02: Add to compare list - Product 1 and verify the product is added successfully
+[INFO ] [2021-03-27 23:45:08,618]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:08,618] TC_04_AddProductToCompareAndClearList - Step 03: Add to compare list - Product 2 and verify the product is added successfully
+[INFO ] [2021-03-27 23:45:10,368]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:10,368] TC_04_AddProductToCompareAndClearList - Step 04: Go to Compare products list
+[INFO ] [2021-03-27 23:45:11,484] TC_04_AddProductToCompareAndClearList - Step 05: Verify Products information (Name and Price) in Compare products list
+[INFO ] [2021-03-27 23:45:11,627]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:11,799]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:11,897]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:12,010]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:12,011] TC_04_AddProductToCompareAndClearList - Step 06: Click to 'Clear list' button
+[INFO ] [2021-03-27 23:45:13,861] TC_04_AddProductToCompareAndClearList - Step 07: Verify Message displays and the products are clear in Compare List
+[INFO ] [2021-03-27 23:45:13,960]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:20,023]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:26,131]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:28,086] TC_05_RecentlyViewedProducts - Step 01: Click to 'Sub Menu'
+[INFO ] [2021-03-27 23:45:29,144] TC_05_RecentlyViewedProducts - Step 02: View detail of 5 products
+[INFO ] [2021-03-27 23:45:43,167] TC_05_RecentlyViewedProducts - Step 03: Go to 'Recently viewed products' link
+[INFO ] [2021-03-27 23:45:44,979] TC_05_RecentlyViewedProducts - Step 04: Verify only last 3 products display
+[INFO ] [2021-03-27 23:45:45,085]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:45,149]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:45,222]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:51,296]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:57,425]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:45:59,271] TC_06_AddProductToCompareAndRemove - Step 01: Click to 'Sub Menu'
+[INFO ] [2021-03-27 23:46:01,568] TC_06_AddProductToCompareAndRemove - Step 02: Add to compare list - Product 1 and verify the product is added successfully
+[INFO ] [2021-03-27 23:46:03,030]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:46:03,030] TC_06_AddProductToCompareAndRemove - Step 03: Add to compare list - Product 2 and verify the product is added successfully
+[INFO ] [2021-03-27 23:46:04,540]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:46:04,540] TC_06_AddProductToCompareAndRemove - Step 04: Add to compare list - Product 3 and verify the product is added successfully
+[INFO ] [2021-03-27 23:46:06,063]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:46:06,064] TC_06_AddProductToCompareAndRemove - Step 05: Go to Compare products list
+[INFO ] [2021-03-27 23:46:07,301] TC_06_AddProductToCompareAndRemove - Step 06: Verify Products information in Compare products list
+[INFO ] [2021-03-27 23:46:07,412]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:46:07,507]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:46:08,631]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:46:08,634] TC_06_AddProductToCompareAndRemove - Step 07: Click to 'Remove' button of 3 products
+[INFO ] [2021-03-27 23:46:17,777] TC_06_AddProductToCompareAndRemove - Step 08: Verify Message displays and the products are clear in Compare List
+[INFO ] [2021-03-27 23:46:17,854]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:46:23,955]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:46:30,022]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:46:36,129]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:46:36,130] OS Name = windows 10
+[INFO ] [2021-03-27 23:46:38,005] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-03-27 23:46:44,184] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-03-27 23:46:50,168]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:46:50,170] TC_02_AddProductToCartFromWishlistPage - Step 01: Click to 'Wishlist' Link
+[INFO ] [2021-03-27 23:46:59,640]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:46:59,642] Price ----------------------------
+[INFO ] [2021-03-27 23:47:02,763]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:02,768] Total price ----------------------------
+[INFO ] [2021-03-27 23:47:05,846]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:05,848] Product detail ----------------------------
+[INFO ] [2021-03-27 23:47:09,008]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:12,126]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:15,235]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:18,366]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:21,447]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:33,534]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:33,537] Price ----------------------------
+[INFO ] [2021-03-27 23:47:36,702]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:36,705] Quantity  ----------------------------
+[INFO ] [2021-03-27 23:47:39,800]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:39,803] Total price ----------------------------
+[INFO ] [2021-03-27 23:47:42,911]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:42,913] Product detail ----------------------------
+[INFO ] [2021-03-27 23:47:46,008]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:49,117]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:52,205]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:55,290]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:47:58,402]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:48:02,812] Click Remove icon ------------------------------------------------------------
+[INFO ] [2021-03-27 23:48:07,419] Verify delete item successfully ---------------------------------------------------------------------
+[INFO ] [2021-03-27 23:48:07,526]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:48:13,565]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:48:20,066]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:48:20,070] Price ----------------------------
+[INFO ] [2021-03-27 23:48:23,169]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:48:23,171] Quantity  ----------------------------
+[INFO ] [2021-03-27 23:48:26,301]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:48:26,303] Total price ----------------------------
+[INFO ] [2021-03-27 23:48:29,408]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:48:32,238] Total price ----------------------------
+[INFO ] [2021-03-27 23:48:35,412]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:48:35,415] Clear the product in Shopping card -------------------------
+[INFO ] [2021-03-27 23:48:40,159] Verify delete product successfully -----------------------------------
+[INFO ] [2021-03-27 23:48:40,338]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:48:46,403]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:48:57,755] Verify Product Name is displayed ----------------------------------------------
+[INFO ] [2021-03-27 23:48:57,877]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:48:57,880] Verify product code --------------------------------------------------------------
+[INFO ] [2021-03-27 23:49:00,981]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:49:00,984] Verify Price ---------------------------------------------------------------------
+[INFO ] [2021-03-27 23:49:04,120]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:49:04,123] Verify Product Qty --------------------------------------------------------------
+[INFO ] [2021-03-27 23:49:07,242]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:49:07,245] Verify Total Price --------------------------------------------------------------
+[INFO ] [2021-03-27 23:49:10,357]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:49:17,553]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:49:29,916]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:49:31,228]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:49:43,828]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:49:44,504]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:49:45,826]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-03-27 23:49:45,826] OS Name = windows 10
+[INFO ] [2021-03-27 23:49:47,422] ---------------------- QUIT BROWSER SUCCESS ----------------------
