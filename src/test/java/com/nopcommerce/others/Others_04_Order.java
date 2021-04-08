@@ -10,7 +10,7 @@ public class Others_04_Order extends AbstractTest {
 
 	private WebDriver driver;
 	private String email, password;
-	private String productName1, productName2, productName3, processor, ram, hdd, os, software, editProcessor, editRam, editHDD, editOS, editSoftware;
+	private String productName1, productName2, productName3, processor, ram, hdd, os, software, editProcessor, editRam, editHDD, editOS, editSoftware, orderNo;
 	private String productCode3, billFirstName, billLastName, billEmail, billCompany, billCountry, billState, billCity, billAdd1, billAdd2, billZipcode, billPhone, billFax;
 	private String shipFirstName, shipLastName, shipEmail, shipCompany, shipCountry, shipState, shipCity, shipAdd1, shipAdd2, shipZipcode, shipPhone, shipFax;
 
@@ -84,76 +84,93 @@ public class Others_04_Order extends AbstractTest {
 
 	@Test()
 	public void TC_01_AddProductToCartWithDetail() {
-		log.info("TC_02_AddProductToCartFromWishlistPage - Step 01: Click to 'Wishlist' Link");
+		log.info("TC_01_AddProductToCartWithDetail - Step 01: Click to 'Desktops' Menu");
 		homePage.clickToNopCommerceSubMenuByText(driver, "Computers ", "Desktops ");
 		desktopsPage = PageGeneratorManager.getDesktopsPage(driver);
 
+		log.info("TC_01_AddProductToCartWithDetail - Step 02: Click to Product link");
 		desktopsPage.clickToNopCommerceLinkByClass(driver, "product-item", productName1);
 		productPage = PageGeneratorManager.getProductPage(driver);
+
+		log.info("TC_01_AddProductToCartWithDetail - Step 03: Select required fields");
 		productPage.selectNopCommerceDropdownListByName(driver, "product_attribute_1", processor);
 		productPage.selectNopCommerceDropdownListByName(driver, "product_attribute_2", ram);
-
 		productPage.clickToNopCommerceRadioButtonByText(driver, hdd);
-
 		productPage.clickToNopCommerceRadioButtonByText(driver, os);
 		productPage.checkOnNopCommerceCheckboxByText(driver, software);
+
+		log.info("TC_01_AddProductToCartWithDetail - Step 04: Click 'Add to cart' button");
 		productPage.clickToNopCommerceSubButtonByValue(driver, "Add to cart");
 
+		log.info("TC_01_AddProductToCartWithDetail - Step 05: Verify the Product is added to cart successfully");
 		productPage.isNopCommerceBarNotificationDisplayed(driver, "The product has been added to your ", "shopping cart");
+
+		log.info("TC_01_AddProductToCartWithDetail - Step 06: Click to 'Shopping cart' link");
 		productPage.clickToNopCommerceLinkByClass(driver, "bar-notification", "shopping cart");
-
 		shoppingCartPage = PageGeneratorManager.getShoppingCartPage(driver);
-		
-		verifyEquals(shoppingCartPage.getNopCommerceProductNameByText(driver, productName1), productName1);
-		log.info("Price ----------------------------");
-		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName1, 4), "$1,330.00");
-		log.info("Total price ----------------------------");
-		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName1, 6), "$1,330.00");
-		log.info("Product detail ----------------------------");
 
+		log.info("TC_01_AddProductToCartWithDetail - Step 07: Verify Product Name is displayed in Shopping cart");
+		verifyEquals(shoppingCartPage.getNopCommerceProductNameByText(driver, productName1), productName1);
+		log.info("TC_01_AddProductToCartWithDetail - Step 08: Verify the Product's price in Shopping cart");
+		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName1, 4), "$1,330.00");
+		log.info("TC_01_AddProductToCartWithDetail - Step 09: Verify the Product's Total price in Shopping cart");
+		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName1, 6), "$1,330.00");
+
+		log.info("TC_01_AddProductToCartWithDetail - Step 10: Verify Product information is the same with the selection in Shopping cart");
 		verifyTrue(shoppingCartPage.getNopCommerceProductDescriptionByColumn(driver, productName1, 3, processor).contains(processor));
 		verifyTrue(shoppingCartPage.getNopCommerceProductDescriptionByColumn(driver, productName1, 3, ram).contains(ram));
 		verifyTrue(shoppingCartPage.getNopCommerceProductDescriptionByColumn(driver, productName1, 3, hdd).contains(hdd));
 		verifyTrue(shoppingCartPage.getNopCommerceProductDescriptionByColumn(driver, productName1, 3, os).contains(os));
 		verifyTrue(shoppingCartPage.getNopCommerceProductDescriptionByColumn(driver, productName1, 3, software).contains(software));
 
+		log.info("TC_01_AddProductToCartWithDetail - Step 11: Back to the Home page ");
 		shoppingCartPage.clickToNopCommerceHomePage(driver);
 	}
 
 	@Test(dependsOnMethods = "TC_01_AddProductToCartWithDetail")
 	public void TC_02_EditProductInShoppingCart() {
 		homePage = PageGeneratorManager.getHomePage(driver);
+
+		log.info("TC_02_EditProductInShoppingCart - Step 01: Click to 'Shopping cart' Header link");
 		homePage.clickToNopCommerceHeaderOtherLinkByText(driver, "Shopping cart");
 		shoppingCartPage = PageGeneratorManager.getShoppingCartPage(driver);
+
+		log.info("TC_02_EditProductInShoppingCart - Step 02: Click to 'Edit' link");
 		shoppingCartPage.clickToEditLink(driver);
 		productPage = PageGeneratorManager.getProductPage(driver);
+
+		log.info("TC_02_EditProductInShoppingCart - Step 03: Edit Product's information");
 		productPage.selectNopCommerceDropdownListByName(driver, "product_attribute_1", editProcessor);
 		productPage.selectNopCommerceDropdownListByName(driver, "product_attribute_2", editRam);
 		productPage.clickToNopCommerceRadioButtonByText(driver, editHDD);
 		productPage.clickToNopCommerceRadioButtonByText(driver, editOS);
-
 		productPage.unCheckOnNopCommerceCheckboxByText(driver, software);
 		productPage.checkOnNopCommerceCheckboxByText(driver, editSoftware);
-
 		productPage.inputNopcommerceProductQuantity(driver, "2");
 
+		log.info("TC_02_EditProductInShoppingCart - Step 03: Click to 'Update' button");
 		productPage.clickToNopCommerceSubButtonByValue(driver, "Update");
 
+		log.info("TC_02_EditProductInShoppingCart - Step 04: Verify the Product is added into 'Shopping cart' successfully");
 		productPage.isNopCommerceBarNotificationDisplayed(driver, "The product has been added to your ", "shopping cart");
-		productPage.clickToNopCommerceLinkByClass(driver, "bar-notification", "shopping cart");
 
+		log.info("TC_02_EditProductInShoppingCart - Step 05: Click to 'Shopping cart' button");
+		productPage.clickToNopCommerceLinkByClass(driver, "bar-notification", "shopping cart");
 		shoppingCartPage = PageGeneratorManager.getShoppingCartPage(driver);
 
+		log.info("TC_02_EditProductInShoppingCart - Step 06: Verify Product Name is displayed successfully");
 		verifyEquals(shoppingCartPage.getNopCommerceProductNameByText(driver, productName1), productName1);
-		log.info("Price ----------------------------");
+
+		log.info("TC_02_EditProductInShoppingCart - Step 07: Verify the Price after editting the Product");
 		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName1, 4), "$1,375.00");
-		log.info("Quantity  ----------------------------");
+
+		log.info("TC_02_EditProductInShoppingCart - Step 08: Verify the Quatity after editting the Product");
 		verifyEquals(shoppingCartPage.getNopCommerceProductQtyByColumn(driver, productName1, 5), "2");
-		log.info("Total price ----------------------------");
+
+		log.info("TC_02_EditProductInShoppingCart - Step 09: Verify the Total price after editting the Product");
 		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName1, 6), "$2,750.00");
 
-
-		log.info("Product detail ----------------------------");
+		log.info("TC_02_EditProductInShoppingCart - Step 10: Verify the Product's detail are correct");
 
 		verifyTrue(shoppingCartPage.getNopCommerceProductDescriptionByColumn(driver, productName1, 3, editProcessor).contains(editProcessor));
 		verifyTrue(shoppingCartPage.getNopCommerceProductDescriptionByColumn(driver, productName1, 3, editRam).contains(editRam));
@@ -161,6 +178,7 @@ public class Others_04_Order extends AbstractTest {
 		verifyTrue(shoppingCartPage.getNopCommerceProductDescriptionByColumn(driver, productName1, 3, editOS).contains(editOS));
 		verifyTrue(shoppingCartPage.getNopCommerceProductDescriptionByColumn(driver, productName1, 3, editSoftware).contains(editSoftware));
 
+		log.info("TC_02_EditProductInShoppingCart - Step 11: Back to the Home page");
 		shoppingCartPage.clickToNopCommerceHomePage(driver);
 
 	}
@@ -168,120 +186,159 @@ public class Others_04_Order extends AbstractTest {
 	@Test(dependsOnMethods = "TC_02_EditProductInShoppingCart")
 	public void TC_03_RemoveFromCart() {
 		homePage = PageGeneratorManager.getHomePage(driver);
+
+		log.info("TC_03_RemoveFromCart - Step 01: Click to 'Shopping cart' header link");
 		homePage.clickToNopCommerceHeaderOtherLinkByText(driver, "Shopping cart");
 
 		shoppingCartPage = PageGeneratorManager.getShoppingCartPage(driver);
-		log.info("Click Remove icon ------------------------------------------------------------");
+
+		log.info("TC_03_RemoveFromCart - Step 02: Click to 'Remove' icon");
 		shoppingCartPage.clickToNopCommerceProductButtonIconByColumn(driver, productName1, 7);
 
-		log.info("Verify delete item successfully ---------------------------------------------------------------------");
+		log.info("TC_03_RemoveFromCart - Step 03: Verify the Product is removed successfully");
 		verifyEquals(shoppingCartPage.getShoppingCardResultMsgByClass(driver, "no-data"), "Your Shopping Cart is empty!");
 		verifyTrue(shoppingCartPage.isNopCommerceProductUndisplayed(driver, productName1));
 
+		log.info("TC_03_RemoveFromCart - Step 04: Back to Home page");
 		shoppingCartPage.clickToNopCommerceHomePage(driver);
 	}
 
 	@Test(dependsOnMethods = "TC_03_RemoveFromCart")
 	public void TC_04_UpdateShoppingCart() {
 		homePage = PageGeneratorManager.getHomePage(driver);
+
+		log.info("TC_04_UpdateShoppingCart - Step 01: Click to 'Desktops' menu");
 		homePage.clickToNopCommerceSubMenuByText(driver, "Computers ", "Desktops ");
 		productPage = PageGeneratorManager.getProductPage(driver);
+
+		log.info("TC_04_UpdateShoppingCart - Step 02: Add Product into Cart");
 		productPage.clickToNopCommerceSubButtonByProductName(driver, productName2, "Add to cart");
 
+		log.info("TC_04_UpdateShoppingCart - Step 03: Verify Product is added successfully");
 		productPage.isNopCommerceBarNotificationDisplayed(driver, "The product has been added to your ", "shopping cart");
-		productPage.clickToNopCommerceLinkByClass(driver, "bar-notification", "shopping cart");
 
+		log.info("TC_04_UpdateShoppingCart - Step 04: Click to 'Shopping cart' link");
+		productPage.clickToNopCommerceLinkByClass(driver, "bar-notification", "shopping cart");
 		shoppingCartPage = PageGeneratorManager.getShoppingCartPage(driver);
 
+		log.info("TC_04_UpdateShoppingCart - Step 05: Verify Product's Name is displayed");
 		verifyEquals(shoppingCartPage.getNopCommerceProductNameByText(driver, productName2), productName2);
-		log.info("Price ----------------------------");
+
+		log.info("TC_04_UpdateShoppingCart - Step 06: Verify Product's Price is correct");
 		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName1, 4), "$500.00");
-		log.info("Quantity  ----------------------------");
+
+		log.info("TC_04_UpdateShoppingCart - Step 07: Verify Product's quantity is correct");
 		verifyEquals(shoppingCartPage.getNopCommerceProductQtyByColumn(driver, productName1, 5), "1");
-		log.info("Total price ----------------------------");
+
+		log.info("TC_04_UpdateShoppingCart - Step 08: Verify Product's total price is correct");
 		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName1, 6), "$500.00");
 
+		log.info("TC_04_UpdateShoppingCart - Step 09: Update the Product's quantity");
 		shoppingCartPage.inputNopcommerceProductQuantity(driver, "5");
+
+		log.info("TC_04_UpdateShoppingCart - Step 10: Click to 'Update shopping cart' button");
 		shoppingCartPage.clickToNopCommerceSubButtonByValue(driver, "Update shopping cart");
 
-		log.info("Total price ----------------------------");
+		log.info("TC_04_UpdateShoppingCart - Step 11: Verify the Product's total price after updating quantity");
 		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName1, 6), "$2,500.00");
 
-		log.info("Clear the product in Shopping card -------------------------");
+		log.info("TC_04_UpdateShoppingCart - Step 11: Clear the Product in Shopping cart");
 		shoppingCartPage.clickToNopCommerceProductButtonIconByColumn(driver, productName2, 7);
 
-		log.info("Verify delete product successfully -----------------------------------");
+		log.info("TC_04_UpdateShoppingCart - Step 12: Verify delete Product successfully");
 		verifyEquals(shoppingCartPage.getShoppingCardResultMsgByClass(driver, "no-data"), "Your Shopping Cart is empty!");
 		verifyTrue(shoppingCartPage.isNopCommerceProductUndisplayed(driver, productName2));
+
+		log.info("TC_04_UpdateShoppingCart - Step 13: Back to the Home page");
 		shoppingCartPage.clickToNopCommerceHomePage(driver);
 	}
 
 	@Test(dependsOnMethods = "TC_04_UpdateShoppingCart")
 	public void TC_05_CheckOutOrderProductByCheque() {
 		homePage = PageGeneratorManager.getHomePage(driver);
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 01: Click to 'Notebooks' menu");
 		homePage.clickToNopCommerceSubMenuByText(driver, "Computers ", "Notebooks ");
 		noteBookPage = PageGeneratorManager.getNoteBooksPage(driver);
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 02: Click to Product's link");
 		noteBookPage.clickToNopCommerceLinkByClass(driver, "product-item", productName3);
-
 		productPage = PageGeneratorManager.getProductPage(driver);
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 03: Click to 'Add to cart' button");
 		productPage.clickToAddToCartButton(driver);
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 04: Verify the Product is added into 'Shopping cart' successfully");
 		productPage.isNopCommerceBarNotificationDisplayed(driver, "The product has been added to your ", "shopping cart");
-		productPage.clickToNopCommerceLinkByClass(driver, "bar-notification", "shopping cart");
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 05: Click to 'Shopping cart' link");
+		productPage.clickToNopCommerceLinkByClass(driver, "bar-notification", "shopping cart");
 		shoppingCartPage = PageGeneratorManager.getShoppingCartPage(driver);
 
-		log.info("Verify Product Name is displayed ----------------------------------------------");
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 06: Verify Product's Name is displayed");
 		verifyEquals(shoppingCartPage.getNopCommerceProductNameByText(driver, productName3), productName3);
 
-		log.info("Verify product code --------------------------------------------------------------");
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 07: Verify Product's Code is correct");
 		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName3, 1), productCode3);
-		log.info("Verify Price ---------------------------------------------------------------------");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 08: Verify Product's price is correct");
 		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName3, 4), "$1,800.00");
-		log.info("Verify Product Qty --------------------------------------------------------------");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 09: Verify Product's quantity is correct");
 		verifyEquals(shoppingCartPage.getNopCommerceProductQtyByColumn(driver, productName3, 5), "2");
-		log.info("Verify Total Price --------------------------------------------------------------");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 10: Verify Product's total price is correct");
 		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName3, 6), "$3,600.00");
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 11: Select 'Gift wrapping' option");
 		shoppingCartPage.selectNopCommerceDropdownListByName(driver, "checkout_attribute_1", "No");
-		shoppingCartPage.checkOnNopCommerceCheckboxByID(driver, "termsofservice");
-		shoppingCartPage.clickToNopCommerceSubButtonByValue(driver, " Checkout ");
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 12: Check on 'Term service' checkbox");
+		shoppingCartPage.checkOnNopCommerceCheckboxByID(driver, "termsofservice");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 13: Click on 'Check out' button");
+		shoppingCartPage.clickToNopCommerceSubButtonByValue(driver, " Checkout ");
 		checkOutPage = PageGeneratorManager.getCheckOutPage(driver);
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 14: Verify 'Billing address' is displayed");
 		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Billing address"));
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 15: Input required information of Billing address");
 		checkOutPage.unCheckOnNopCommerceCheckboxByText(driver, "Ship to the same address");
-		checkOutPage.setNopCommerceValueForTextBoxByID(driver,"BillingNewAddress_FirstName", billFirstName);
-		checkOutPage.setNopCommerceValueForTextBoxByID(driver,"BillingNewAddress_LastName", billLastName);
-		checkOutPage.setNopCommerceValueForTextBoxByID(driver,"BillingNewAddress_Email", billEmail);
-		checkOutPage.setNopCommerceValueForTextBoxByID(driver,"BillingNewAddress_Company", billCompany);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "BillingNewAddress_FirstName", billFirstName);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "BillingNewAddress_LastName", billLastName);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "BillingNewAddress_Email", billEmail);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "BillingNewAddress_Company", billCompany);
 
-		checkOutPage.selectNopCommerceDropdownListByName(driver,"BillingNewAddress.CountryId",billCountry);
-		checkOutPage.selectNopCommerceDropdownListByName(driver,"BillingNewAddress.StateProvinceId",billState);
+		checkOutPage.selectNopCommerceDropdownListByName(driver, "BillingNewAddress.CountryId", billCountry);
+		checkOutPage.selectNopCommerceDropdownListByName(driver, "BillingNewAddress.StateProvinceId", billState);
 
-		checkOutPage.setNopCommerceValueForTextBoxByID(driver,"BillingNewAddress_City", billCity);
-		checkOutPage.setNopCommerceValueForTextBoxByID(driver,"BillingNewAddress_Address1", billAdd1);
-		checkOutPage.setNopCommerceValueForTextBoxByID(driver,"BillingNewAddress_Address2", billAdd2);
-		checkOutPage.setNopCommerceValueForTextBoxByID(driver,"BillingNewAddress_ZipPostalCode", billZipcode);
-		checkOutPage.setNopCommerceValueForTextBoxByID(driver,"BillingNewAddress_PhoneNumber", billPhone);
-		checkOutPage.setNopCommerceValueForTextBoxByID(driver,"BillingNewAddress_FaxNumber", billFax);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "BillingNewAddress_City", billCity);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "BillingNewAddress_Address1", billAdd1);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "BillingNewAddress_Address2", billAdd2);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "BillingNewAddress_ZipPostalCode", billZipcode);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "BillingNewAddress_PhoneNumber", billPhone);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "BillingNewAddress_FaxNumber", billFax);
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 16: Click on 'Continue' button");
 		checkOutPage.clickToButtonByID(driver, "billing-buttons-container", "Continue");
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 17: Verify 'Shipping address' is displayed");
 		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Shipping address"));
 		verifyTrue(checkOutPage.isShippingTextDisplayed(driver));
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 18: Select 'New Address' option");
 		checkOutPage.selectNopCommerceDropdownListByName(driver, "shipping_address_id", "New Address");
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 19: Input required field of Shipping address");
 		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "ShippingNewAddress_FirstName", shipFirstName);
 		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "ShippingNewAddress_LastName", shipLastName);
 		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "ShippingNewAddress_Email", shipEmail);
 		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "ShippingNewAddress_Company", shipCompany);
 
-		checkOutPage.selectNopCommerceDropdownListByName(driver, "ShippingNewAddress.CountryId",shipCountry);
+		checkOutPage.selectNopCommerceDropdownListByName(driver, "ShippingNewAddress.CountryId", shipCountry);
 		checkOutPage.sleepInSecond(driver, 1);
-		checkOutPage.selectNopCommerceDropdownListByName(driver, "ShippingNewAddress.StateProvinceId",shipState);
+		checkOutPage.selectNopCommerceDropdownListByName(driver, "ShippingNewAddress.StateProvinceId", shipState);
 
 		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "ShippingNewAddress_City", shipCity);
 		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "ShippingNewAddress_Address1", shipAdd1);
@@ -290,18 +347,135 @@ public class Others_04_Order extends AbstractTest {
 		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "ShippingNewAddress_PhoneNumber", shipPhone);
 		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "ShippingNewAddress_FaxNumber", shipFax);
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 20: Click on 'Continue' button");
 		checkOutPage.clickToButtonByID(driver, "shipping-buttons-container", "Continue");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 21: Verify 'Shipping method' is displayed");
 		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Shipping method"));
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 22: Select Shipping method");
 		checkOutPage.clickToNopCommerceRadioButtonByText(driver, "Ground ($0.00)");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 23: Click to 'Continue' button");
 		checkOutPage.clickToButtonByID(driver, "shipping-method-buttons-container", "Continue");
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 24: Verify 'Payment method' is displayed");
 		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Payment method"));
-		checkOutPage.clickToNopCommerceRadioButtonByText(driver,"Check / Money Order");
-		checkOutPage.clickToButtonByID(driver,"payment-method-buttons-container", "Continue");
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 25: Select Payment method");
+		checkOutPage.clickToNopCommerceRadioButtonByText(driver, "Check / Money Order");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 26: Click on 'Continue' button");
+		checkOutPage.clickToButtonByID(driver, "payment-method-buttons-container", "Continue");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 27: Verify 'Payment information' is displayed");
 		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Payment information"));
+		verifyTrue(checkOutPage.isPaymentInforDisplayedByText(driver, "Mail Personal or Business Check, Cashier's Check or money order to:"));
+		verifyTrue(checkOutPage.isPaymentInforDisplayedByText(driver, "NOP SOLUTIONS"));
+		verifyTrue(checkOutPage.isPaymentInforDisplayedByText(driver, "your address here,"));
+		verifyTrue(checkOutPage.isPaymentInforDisplayedByText(driver, "New York, NY 10001"));
+		verifyTrue(checkOutPage.isPaymentInforDisplayedByText(driver, "USA"));
 
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 28: Click on 'Continue' button");
+		checkOutPage.clickToButtonByID(driver, "checkout-step-payment-info", "Continue");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 29: Verify 'Confirm order' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Confirm order"));
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 30: Verify Billing information are correct");
+		verifyTrue(checkOutPage.isConfirmOrderTitleDisplayedByText(driver, "billing-info", "Billing Address"));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "name").contains(billFirstName + " " + billLastName));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "email").contains(billEmail));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "phone").contains(billPhone));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "fax").contains(billFax));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "company").contains(billCompany));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "address1").contains(billAdd1));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "address2").contains(billAdd2));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "city-state-zip").contains(billCity + "," + billZipcode));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "country").contains(billCountry));
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 31: Verify Payment method is correct");
+		verifyTrue(checkOutPage.isConfirmOrderTitleDisplayedByText(driver, "payment-method-info", "Payment"));
+		verifyTrue(checkOutPage.getConfirmOrderMethodByClass(driver, "payment-method-info", "Payment Method:").contains("Check / Money Order"));
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 32: Verify Shipping address are correct");
+		verifyTrue(checkOutPage.isConfirmOrderTitleDisplayedByText(driver, "shipping-info", "Shipping Address"));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "name").contains(shipFirstName + " " + shipLastName));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "email").contains(shipEmail));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "phone").contains(shipPhone));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "fax").contains(shipFax));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "company").contains(shipCompany));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "address1").contains(shipAdd1));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "city-state-zip").contains(shipCity + "," + shipState + "," + shipZipcode));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "country").contains(shipCountry));
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 33: Verify Shipping method is correct");
+		verifyTrue(checkOutPage.isConfirmOrderTitleDisplayedByText(driver, "shipping-method-info", "Shipping"));
+		verifyTrue(checkOutPage.getConfirmOrderMethodByClass(driver, "shipping-method-info", "Shipping Method:").contains("Ground"));
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 33: Verify the Product information are correct");
+		verifyEquals(checkOutPage.getNopCommerceProductInforByColumn(driver, productName3, 1), productCode3);
+		verifyEquals(checkOutPage.getNopCommerceProductNameByText(driver, productName3), productName3);
+		verifyEquals(checkOutPage.getNopCommerceProductInforByColumn(driver, productName3, 4), "$1,800.00");
+		verifyEquals(checkOutPage.getNopCommerceProductInforByColumn(driver, productName3, 5), "2");
+		verifyEquals(checkOutPage.getNopCommerceProductInforByColumn(driver, productName3, 6), "$3,600.00");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 34: Verify Payment information are correct");
+		verifyTrue(checkOutPage.getCartOptionStatus(driver).contains("No"));
+		verifyEquals(checkOutPage.getTotalInforByText(driver, "total-info", "Sub-Total:"), "$3,600.00");
+		verifyEquals(checkOutPage.getTotalInforByText(driver, "total-info", "Shipping:"), "$0.00");
+		verifyEquals(checkOutPage.getTotalInforByText(driver, "total-info", "Tax:"), "$0.00");
+		verifyEquals(checkOutPage.getTotalInforByText(driver, "total-info", "Total:"), "$3,600.00");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 35: Click to 'Confirm' button");
+		checkOutPage.clickToNopCommerceButtonByValue(driver, "Confirm");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 36: Verify the Product is ordered successfully");
+		verifyEquals(checkOutPage.getCheckOutCompletedPageTitleByClass(driver), "Thank you");
+		verifyEquals(checkOutPage.getCheckOutCompletedDetailByClass(driver, "title"), "Your order has been successfully processed!");
+
+		orderNo = checkOutPage.getCheckOutOrderNo(driver, "details");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 37: Back to the Home page");
+		checkOutPage.clickToNopCommerceButtonByValue(driver, "Continue");
+		homePage = PageGeneratorManager.getHomePage(driver);
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 38: Click to 'My account' link");
+		homePage.clickToNopCommerceHeaderLinkByText(driver, "My account");
+		myAccountPage = PageGeneratorManager.getMyAccountPage(driver);
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 39: Click to 'Orders' list menu");
+		myAccountPage.clickToNopCommerceListBoxMenuByName(driver, "Orders");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 40: Verify Order information is displayed");
+		verifyEquals(myAccountPage.getMyAccountTitleByClass(driver, "page-title"), "My account - Orders");
+		verifyTrue(myAccountPage.isMyAccountOrderDisplayed(driver, orderNo));
+		verifyEquals(myAccountPage.getMyAccountOrderInfoByOrderNo(driver, orderNo, "order-total"), "$3,600.00");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 41: Click to 'Detail' link based on Order No");
+		myAccountPage.clickToOrderDetailButtonByOrderNo(driver, orderNo);
+		orderDetailPage = PageGeneratorManager.getOrderDetailPage(driver);
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 42: Verify Order information are displayed correctly");
+		verifyTrue(orderDetailPage.getOrderDetailTextByClass(driver, "order-overview", "order-number").contains(orderNo));
+		verifyEquals(orderDetailPage.getOrderDetailTextByClass(driver, "order-overview", "order-number"), "ORDER #" + orderNo);
+		verifyEquals(orderDetailPage.getOrderDetailContentByClass(driver, "order-overview", "order-date"), "Order Date: " + getTodayFormat());
+		verifyTrue(orderDetailPage.getOrderDetailContentByClass(driver, "order-overview", "order-status").contains("Pending"));
+		verifyEquals(orderDetailPage.getOrderTotalPriceByClass(driver, "order-total"), "$3,600.00");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 43: Verify Billing information / Shipping information are displayed correctly");
+		verifyTrue(orderDetailPage.getOrderDetailContentByClass(driver, "billing-info", "email").contains(billEmail));
+		verifyTrue(orderDetailPage.getOrderDetailContentByClass(driver, "shipping-info", "email").contains(shipEmail));
+		verifyEquals(orderDetailPage.getOrderMethodByClass(driver, "payment-method-info", "payment-method"), "Check / Money Order");
+		verifyEquals(orderDetailPage.getOrderMethodByClass(driver, "shipping-method-info", "shipping-method"), "Ground");
+
+		log.info("TC_05_CheckOutOrderProductByCheque - Step 44: Verify Product's detail are displayed successfully");
+		verifyEquals(orderDetailPage.getNopCommerceProductInforByColumn(driver, productName3, 1), productCode3);
+		verifyEquals(orderDetailPage.getNopCommerceProductNameByText(driver, productName3), productName3);
+		verifyEquals(orderDetailPage.getNopCommerceProductInforByColumn(driver, productName3, 3), "$1,800.00");
+		verifyEquals(orderDetailPage.getNopCommerceProductInforByColumn(driver, productName3, 4), "2");
+		verifyEquals(orderDetailPage.getNopCommerceProductInforByColumn(driver, productName3, 5), "$3,600.00");
+		verifyEquals(orderDetailPage.getTotalInforByText(driver, "total-info", "Order Total:"), "$3,600.00");
 	}
 
 	@Test()
@@ -324,4 +498,6 @@ public class Others_04_Order extends AbstractTest {
 	private ShoppingCartPageObject shoppingCartPage;
 	private NoteBooksPageObject noteBookPage;
 	private CheckOutPageObject checkOutPage;
+	private MyAccountPageObject myAccountPage;
+	private OrderDetailPageObject orderDetailPage;
 }

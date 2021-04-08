@@ -67,4 +67,8 @@ public class PageGeneratorManager {
 	public static CheckOutPageObject getCheckOutPage(WebDriver driver) {
 		return new CheckOutPageObject(driver);
 	}
+
+	public static OrderDetailPageObject getOrderDetailPage(WebDriver driver) {
+		return new OrderDetailPageObject(driver);
+	}
 }

@@ -27,4 +27,23 @@ public class MyAccountPageObject extends AbstractPage {
 		return getTextElement(driver, ProductReviewPageUI.DYNAMIC_REVIEW_INFO, classValue, textValue);
 	}
 
+	public String getMyAccountTitleByClass(WebDriver driver, String classValue) {
+		waitForElementVisible(driver, MyAccountPageUI.DYNAMIC_MYACCOUNT_ORDER_TITLE, classValue);
+		return getTextElement(driver, MyAccountPageUI.DYNAMIC_MYACCOUNT_ORDER_TITLE, classValue);
+	}
+
+	public String getMyAccountOrderInfoByOrderNo(WebDriver driver, String orderNo, String classValue) {
+		waitForElementVisible(driver, MyAccountPageUI.DYNAMIC_MYACCOUNT_ORDER_INFO, orderNo, classValue);
+		return getTextElement(driver, MyAccountPageUI.DYNAMIC_MYACCOUNT_ORDER_INFO, orderNo, classValue);
+	}
+
+	public boolean isMyAccountOrderDisplayed(WebDriver driver, String orderNo) {
+		waitForElementVisible(driver, MyAccountPageUI.DYNAMIC_MYACCOUNT_ORDER_DETAIL, orderNo);
+		return isElementDisplayed(driver, MyAccountPageUI.DYNAMIC_MYACCOUNT_ORDER_DETAIL, orderNo);
+	}
+
+	public void clickToOrderDetailButtonByOrderNo(WebDriver driver, String orderNo) {
+		waitForElementClickable(driver, MyAccountPageUI.DYNAMIC_MYACCOUNT_ORDER_DETAIL_BUTTON, orderNo);
+		clickToElement(driver, MyAccountPageUI.DYNAMIC_MYACCOUNT_ORDER_DETAIL_BUTTON, orderNo);
+	}
 }

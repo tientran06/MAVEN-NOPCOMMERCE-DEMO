@@ -19,7 +19,16 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import java.io.File;
+import java.lang.reflect.Array;
+import java.time.Clock;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
@@ -355,9 +364,18 @@ public class AbstractTest {
 		int year = now.getYear();
 		return String.valueOf(year);
 	}
-
+	
 	protected String getToday() {
 		return getCurrentYear() + "-" + getCurrentMonth() + "-" + getCurrentDay();
 	}
+	
+	protected String getTodayFormat() {
+		//DateTime now = new DateTime(DateTimeZone.UTC);
+		LocalDateTime myDate = LocalDateTime.now(Clock.systemUTC());
+		DateTimeFormatter myDateTimeFormat = DateTimeFormatter.ofPattern("EEEE, MMMM dd, yyyy");
+		String formattedDate = myDate.format(myDateTimeFormat);
+		return  formattedDate;
+	}
 
+	
 }
