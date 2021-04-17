@@ -4,8 +4,6 @@ import commons.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import pageUIs.nopcommerce.OrderDetailPageUI;
 
-import java.util.Collection;
-
 public class OrderDetailPageObject extends AbstractPage {
 	WebDriver driver;
 
@@ -38,4 +36,8 @@ public class OrderDetailPageObject extends AbstractPage {
 		return getTextElement(driver, OrderDetailPageUI.DYNAMIC_ORDER_TOTAL_INFO, classValue, textValue);
 	}
 
+	public String getSelectedOptionStatus(WebDriver driver) {
+		waitForElementVisible(driver, OrderDetailPageUI.SELECTED_CHECKOUT_OPTIONS);
+		return getTextElement(driver, OrderDetailPageUI.SELECTED_CHECKOUT_OPTIONS);
+	}
 }

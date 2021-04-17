@@ -39,6 +39,7 @@ public class AbstractPageNopCommerceUI {
 	// Button
 	// public static final String DYNAMIC_BUTTON = "//div[@class = '%s']//input[@value = '%s']";
 	public static final String DYNAMIC_DETAIL_BUTTON = "//button[text() = '%s']";
+	public static final String DYNAMIC_DETAIL_BUTTON_ID = "//button[@id = '%s']";
 	public static final String DYNAMIC_BUTTON = "//div[@class = 'buttons']//button[text() = '%s']";
 	public static final String DYNAMIC_BUTTON_BAR = "//div[@id = 'bar-notification']//span[@class = '%s']";
 

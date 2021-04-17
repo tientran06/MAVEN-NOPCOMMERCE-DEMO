@@ -9,9 +9,9 @@ import pageObjects.nopcommerce.*;
 public class Others_04_Order extends AbstractTest {
 
 	private WebDriver driver;
-	private String email, password;
-	private String productName1, productName2, productName3, processor, ram, hdd, os, software, editProcessor, editRam, editHDD, editOS, editSoftware, orderNo;
-	private String productCode3, billFirstName, billLastName, billEmail, billCompany, billCountry, billState, billCity, billAdd1, billAdd2, billZipcode, billPhone, billFax;
+	private String email, password, cardType, cardName, cardNumber, expireMonth, expireYear, cardCode, existingBillAdd, existingShipAdd;
+	private String productName1, productName2, productName3, productName4, processor, ram, hdd, os, software, editProcessor, editRam, editHDD, editOS, editSoftware, orderNo;
+	private String productCode3, productCode4, billFirstName, billLastName, billEmail, billCompany, billCountry, billState, billCity, billAdd1, billAdd2, billZipcode, billPhone, billFax;
 	private String shipFirstName, shipLastName, shipEmail, shipCompany, shipCountry, shipState, shipCity, shipAdd1, shipAdd2, shipZipcode, shipPhone, shipFax;
 
 	@Parameters("browser")
@@ -39,6 +39,8 @@ public class Others_04_Order extends AbstractTest {
 		productName2 = "Lenovo IdeaCentre 600 All-in-One PC";
 		productName3 = "Apple MacBook Pro 13-inch";
 		productCode3 = "AP_MBP_13";
+		productName4 = "HTC One M8 Android L 5.0 Lollipop";
+		productCode4 = "M8_HTC_5L";
 
 		billFirstName = "Automation";
 		billLastName = "Selenium";
@@ -50,8 +52,9 @@ public class Others_04_Order extends AbstractTest {
 		billAdd1 = "01 Tran Van Du";
 		billAdd2 = "131 Nguyen Duc Thuan";
 		billZipcode = "70000";
-		billPhone = "09534483323";
-		billFax = "02843324872847";
+		billPhone = "093" + randomNumber7Digits();
+		billFax = "028433" + randomNumber7Digits();
+		existingBillAdd = billFirstName + " " + billLastName + ", " + billAdd1 + ", " + billCity + " " + billZipcode + ", " + billCountry;
 
 		shipFirstName = "Anh";
 		shipLastName = "Nguyen";
@@ -63,8 +66,16 @@ public class Others_04_Order extends AbstractTest {
 		shipAdd1 = "01 NewYork";
 		shipAdd2 = "";
 		shipZipcode = "50000";
-		shipPhone = "07834349233";
-		shipFax = "34234234544";
+		shipPhone = "078" + randomNumber7Digits();
+		shipFax = "028543" + randomNumber7Digits();
+		existingShipAdd = shipFirstName + " " + shipLastName + ", " + shipAdd1 + ", " + shipCity + ", " + shipState + " " + shipZipcode + ", " + shipCountry;
+
+		cardType = "Visa";
+		cardName = "Tran Tuan Ngoc";
+		cardNumber = "445093000321453";
+		expireMonth = "12";
+		expireYear = "2022";
+		cardCode = "060";
 
 		log.info("Pre-conditions: Login to the System and go to My Account page");
 
@@ -459,7 +470,7 @@ public class Others_04_Order extends AbstractTest {
 		log.info("TC_05_CheckOutOrderProductByCheque - Step 42: Verify Order information are displayed correctly");
 		verifyTrue(orderDetailPage.getOrderDetailTextByClass(driver, "order-overview", "order-number").contains(orderNo));
 		verifyEquals(orderDetailPage.getOrderDetailTextByClass(driver, "order-overview", "order-number"), "ORDER #" + orderNo);
-		verifyEquals(orderDetailPage.getOrderDetailContentByClass(driver, "order-overview", "order-date"), "Order Date: " + getTodayFormat());
+		verifyEquals(orderDetailPage.getOrderDetailContentByClass(driver, "order-overview", "order-date"), "Order Date: " +getCSTDateTime());
 		verifyTrue(orderDetailPage.getOrderDetailContentByClass(driver, "order-overview", "order-status").contains("Pending"));
 		verifyEquals(orderDetailPage.getOrderTotalPriceByClass(driver, "order-total"), "$3,600.00");
 
@@ -478,12 +489,392 @@ public class Others_04_Order extends AbstractTest {
 		verifyEquals(orderDetailPage.getTotalInforByText(driver, "total-info", "Order Total:"), "$3,600.00");
 	}
 
-	@Test()
+	@Test(dependsOnMethods = "TC_05_CheckOutOrderProductByCheque")
 	public void TC_06_CheckOutOrderProductByCreditCard() {
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 01: Click to 'Electronics' menu");
+		homePage.clickToNopCommerceSubMenuByText(driver, "Electronics ", "Cell phones ");
+		noteBookPage = PageGeneratorManager.getNoteBooksPage(driver);
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 02: Click to Product's link");
+		noteBookPage.clickToNopCommerceLinkByClass(driver, "product-item", productName4);
+		productPage = PageGeneratorManager.getProductPage(driver);
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 03: Click to 'Add to cart' button");
+		productPage.clickToAddToCartButton(driver);
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 04: Verify the Product is added into 'Shopping cart' successfully");
+		productPage.isNopCommerceBarNotificationDisplayed(driver, "The product has been added to your ", "shopping cart");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 05: Click to 'Shopping cart' link");
+		productPage.clickToNopCommerceLinkByClass(driver, "bar-notification", "shopping cart");
+		shoppingCartPage = PageGeneratorManager.getShoppingCartPage(driver);
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 06: Verify Product's Name is displayed");
+		verifyEquals(shoppingCartPage.getNopCommerceProductNameByText(driver, productName4), productName4);
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 07: Verify Product's Code is correct");
+		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName4, 1), productCode4);
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 08: Verify Product's price is correct");
+		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName4, 4), "$245.00");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 09: Verify Product's quantity is correct");
+		verifyEquals(shoppingCartPage.getNopCommerceProductQtyByColumn(driver, productName4, 5), "1");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 10: Verify Product's total price is correct");
+		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName4, 6), "$245.00");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 11: Select 'Gift wrapping' option");
+		shoppingCartPage.selectNopCommerceDropdownListByName(driver, "checkout_attribute_1", "Yes [+$10.00]");
+		shoppingCartPage.isNopCommerceDropdownListSelectedByText(driver, "checkout_attribute_1", "Yes [+$10.00]");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 12: Verify total info are correct");
+		verifyTrue(shoppingCartPage.getShoppingCardTextByClass(driver, "Yes [+$10.00]").contains("Yes [+$10.00]"));
+		verifyEquals(shoppingCartPage.getShoppingCArdTotalInfoByLabel(driver, "Total"), "$255.00");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 13: Check on 'Term service' checkbox");
+		shoppingCartPage.checkOnNopCommerceCheckboxByID(driver, "termsofservice");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 14: Click on 'Check out' button");
+		shoppingCartPage.clickToNopCommerceSubButtonByValue(driver, " Checkout ");
+		checkOutPage = PageGeneratorManager.getCheckOutPage(driver);
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 15: Verify 'Billing address' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Billing address"));
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 16: Unchecked 'Ship to the same address' checkbox");
+		checkOutPage.unCheckOnNopCommerceCheckboxByText(driver, "Ship to the same address");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 17: Select existing Billing address");
+		checkOutPage.selectNopCommerceDropdownListByName(driver, "billing_address_id", existingBillAdd);
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 18: Click on 'Continue' button");
+		checkOutPage.clickToButtonByID(driver, "billing-buttons-container", "Continue");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 19: Verify 'Shipping address' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Shipping address"));
+		verifyTrue(checkOutPage.isShippingTextDisplayed(driver));
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 20: Select existing Shipping address option");
+		checkOutPage.selectNopCommerceDropdownListByName(driver, "shipping_address_id", existingShipAdd);
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 21: Click on 'Continue' button");
+		checkOutPage.clickToButtonByID(driver, "shipping-buttons-container", "Continue");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 22: Verify 'Shipping method' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Shipping method"));
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 23: Select Shipping method");
+		checkOutPage.clickToNopCommerceRadioButtonByText(driver, "Ground ($0.00)");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 24: Click to 'Continue' button");
+		checkOutPage.clickToButtonByID(driver, "shipping-method-buttons-container", "Continue");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 25: Verify 'Payment method' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Payment method"));
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 26: Select Payment method");
+		checkOutPage.clickToNopCommerceRadioButtonByText(driver, "Credit Card");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 27: Click on 'Continue' button");
+		checkOutPage.clickToButtonByID(driver, "payment-method-buttons-container", "Continue");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 28: Verify 'Payment information' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Payment information"));
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 29: Select/input Credit Card information");
+		checkOutPage.selectNopCommerceDropdownListByName(driver, "CreditCardType", cardType);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "CardholderName", cardName);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "CardNumber", cardNumber);
+		checkOutPage.selectNopCommerceDropdownListByName(driver, "ExpireMonth", expireMonth);
+		checkOutPage.selectNopCommerceDropdownListByName(driver, "ExpireYear", expireYear);
+		checkOutPage.setNopCommerceValueForTextBoxByID(driver, "CardCode", cardCode);
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 30: Click on 'Continue' button");
+		checkOutPage.clickToButtonByID(driver, "checkout-step-payment-info", "Continue");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 31: Verify 'Confirm order' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Confirm order"));
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 32: Verify Billing information are correct");
+		verifyTrue(checkOutPage.isConfirmOrderTitleDisplayedByText(driver, "billing-info", "Billing Address"));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "name").contains(billFirstName + " " + billLastName));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "email").contains(billEmail));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "phone").contains(billPhone));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "fax").contains(billFax));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "company").contains(billCompany));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "address1").contains(billAdd1));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "address2").contains(billAdd2));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "city-state-zip").contains(billCity + "," + billZipcode));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "country").contains(billCountry));
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 33: Verify Payment method is correct");
+		verifyTrue(checkOutPage.isConfirmOrderTitleDisplayedByText(driver, "payment-method-info", "Payment"));
+		verifyTrue(checkOutPage.getConfirmOrderMethodByClass(driver, "payment-method-info", "Payment Method:").contains("Credit Card"));
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 34: Verify Shipping address are correct");
+		verifyTrue(checkOutPage.isConfirmOrderTitleDisplayedByText(driver, "shipping-info", "Shipping Address"));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "name").contains(shipFirstName + " " + shipLastName));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "email").contains(shipEmail));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "phone").contains(shipPhone));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "fax").contains(shipFax));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "company").contains(shipCompany));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "address1").contains(shipAdd1));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "city-state-zip").contains(shipCity + "," + shipState + "," + shipZipcode));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "country").contains(shipCountry));
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 34: Verify Shipping method is correct");
+		verifyTrue(checkOutPage.isConfirmOrderTitleDisplayedByText(driver, "shipping-method-info", "Shipping"));
+		verifyTrue(checkOutPage.getConfirmOrderMethodByClass(driver, "shipping-method-info", "Shipping Method:").contains("Ground"));
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 35: Verify the Product information are correct");
+		verifyEquals(checkOutPage.getNopCommerceProductInforByColumn(driver, productName4, 1), productCode4);
+		verifyEquals(checkOutPage.getNopCommerceProductNameByText(driver, productName4), productName4);
+		verifyEquals(checkOutPage.getNopCommerceProductInforByColumn(driver, productName4, 4), "$245.00");
+		verifyEquals(checkOutPage.getNopCommerceProductInforByColumn(driver, productName4, 5), "1");
+		verifyEquals(checkOutPage.getNopCommerceProductInforByColumn(driver, productName4, 6), "$245.00");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 36: Verify Payment information are correct");
+		verifyTrue(checkOutPage.getCartOptionStatus(driver).contains("Yes [+$10.00]"));
+		verifyEquals(checkOutPage.getTotalInforByText(driver, "total-info", "Sub-Total:"), "$255.00");
+		verifyEquals(checkOutPage.getTotalInforByText(driver, "total-info", "Shipping:"), "$0.00");
+		verifyEquals(checkOutPage.getTotalInforByText(driver, "total-info", "Tax:"), "$0.00");
+		verifyEquals(checkOutPage.getTotalInforByText(driver, "total-info", "Total:"), "$255.00");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 37: Click to 'Confirm' button");
+		checkOutPage.clickToNopCommerceButtonByValue(driver, "Confirm");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 38: Verify the Product is ordered successfully");
+		verifyEquals(checkOutPage.getCheckOutCompletedPageTitleByClass(driver), "Thank you");
+		verifyEquals(checkOutPage.getCheckOutCompletedDetailByClass(driver, "title"), "Your order has been successfully processed!");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 39: Get Order No");
+		orderNo = checkOutPage.getCheckOutOrderNo(driver, "details");
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 40: Click to Order detail linnk");
+		checkOutPage.clickToNopCommerceLinkByClass(driver, "details-link", "Click here for order details.");
+
+		orderDetailPage = PageGeneratorManager.getOrderDetailPage(driver);
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 41: Verify Order information are displayed correctly");
+		verifyTrue(orderDetailPage.getOrderDetailTextByClass(driver, "order-overview", "order-number").contains(orderNo));
+		verifyEquals(orderDetailPage.getOrderDetailTextByClass(driver, "order-overview", "order-number"), "ORDER #" + orderNo);
+		verifyEquals(orderDetailPage.getOrderDetailContentByClass(driver, "order-overview", "order-date"), "Order Date: " +getCSTDateTime());
+		verifyTrue(orderDetailPage.getOrderDetailContentByClass(driver, "order-overview", "order-status").contains("Pending"));
+		verifyEquals(orderDetailPage.getOrderTotalPriceByClass(driver, "order-total"), "$255.00");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 42: Verify Billing information / Shipping information are displayed correctly");
+		verifyTrue(orderDetailPage.getOrderDetailContentByClass(driver, "billing-info", "email").contains(billEmail));
+		verifyTrue(orderDetailPage.getOrderDetailContentByClass(driver, "shipping-info", "email").contains(shipEmail));
+		verifyEquals(orderDetailPage.getOrderMethodByClass(driver, "payment-method-info", "payment-method"), "Credit Card");
+		verifyEquals(orderDetailPage.getOrderMethodByClass(driver, "shipping-method-info", "shipping-method"), "Ground");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 43: Verify Product's detail are displayed successfully");
+		verifyEquals(orderDetailPage.getNopCommerceProductInforByColumn(driver, productName4, 1), productCode4);
+		verifyEquals(orderDetailPage.getNopCommerceProductNameByText(driver, productName4), productName4);
+		verifyEquals(orderDetailPage.getNopCommerceProductInforByColumn(driver, productName4, 3), "$245.00");
+		verifyEquals(orderDetailPage.getNopCommerceProductInforByColumn(driver, productName4, 4), "1");
+		verifyEquals(orderDetailPage.getNopCommerceProductInforByColumn(driver, productName4, 5), "$245.00");
+		verifyTrue(orderDetailPage.getSelectedOptionStatus(driver).contains("Yes [+$10.00]"));
+		verifyEquals(orderDetailPage.getTotalInforByText(driver, "total-info", "Order Total:"), "$255.00");
+
+		log.info("TC_06_CheckOutOrderProductByCreditCard - Step 44: Back to the Home page");
+		orderDetailPage.clickToNopCommerceHomePage(driver);
 	}
 
-	@Test()
+	@Test(dependsOnMethods = "TC_06_CheckOutOrderProductByCreditCard")
 	public void TC_07_ReOrderProduct() {
+		
+		homePage = PageGeneratorManager.getHomePage(driver);
+		
+		log.info("TC_07_ReOrderProduct - Step 01: Click to 'My account' link from Home page");
+		homePage.clickToNopCommerceHeaderLinkByText(driver, "My account");
+		myAccountPage = PageGeneratorManager.getMyAccountPage(driver);
+
+		log.info("TC_07_ReOrderProduct - Step 02: Click to 'Orders' menu list");
+		myAccountPage.clickToNopCommerceListBoxMenuByName(driver, "Orders");
+		
+		log.info("TC_07_ReOrderProduct - Step 03: Click to 'Detail' icon of Order No");
+		myAccountPage.clickToOrderDetailButtonByOrderNo(driver, orderNo);
+
+		log.info("TC_07_ReOrderProduct - Step 04: Click 'Re-0rder' button");
+		checkOutPage.clickToNopCommerceSubButtonByValue(driver, "Re-order");
+		shoppingCartPage = PageGeneratorManager.getShoppingCartPage(driver);
+
+		log.info("TC_07_ReOrderProduct - Step 05: Verify Product's Name is displayed");
+		verifyEquals(shoppingCartPage.getNopCommerceProductNameByText(driver, productName4), productName4);
+
+		log.info("TC_07_ReOrderProduct - Step 06: Verify Product's Code is correct");
+		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName4, 1), productCode4);
+
+		log.info("TC_07_ReOrderProduct - Step 07: Verify Product's price is correct");
+		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName4, 4), "$245.00");
+
+		log.info("TC_07_ReOrderProduct - Step 08: Verify Product's quantity is correct");
+		verifyEquals(shoppingCartPage.getNopCommerceProductQtyByColumn(driver, productName4, 5), "1");
+
+		log.info("TC_07_ReOrderProduct - Step 9: Verify Product's total price is correct");
+		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName4, 6), "$245.00");
+
+		log.info("TC_07_ReOrderProduct - Step 10: Update the Quantity into 10");
+		shoppingCartPage.inputNopcommerceProductQuantity(driver, "10");
+		
+		log.info("TC_07_ReOrderProduct - Step 11: Click to 'Update shopping cart' button");
+		shoppingCartPage.clickToNopCommerceSubButtonByValue(driver, "Update shopping cart");
+
+		log.info("TC_07_ReOrderProduct - Step 12: Verify Product's quantity is correct");
+		verifyEquals(shoppingCartPage.getNopCommerceProductQtyByColumn(driver, productName4, 5), "10");
+
+		log.info("TC_07_ReOrderProduct - Step 13: Verify Product's total price is correct");
+		verifyEquals(shoppingCartPage.getNopCommerceProductInforByColumn(driver, productName4, 6), "$2,450.00");
+
+		log.info("TC_07_ReOrderProduct - Step 14: Verify Gift's option is selected");
+		shoppingCartPage.isNopCommerceDropdownListSelectedByText(driver, "checkout_attribute_1", "Yes [+$10.00]");
+
+		log.info("TC_07_ReOrderProduct - Step 15: Verify total info are correct");
+		verifyTrue(shoppingCartPage.getShoppingCardTextByClass(driver, "Yes [+$10.00]").contains("Yes [+$10.00]"));
+		verifyEquals(shoppingCartPage.getShoppingCArdTotalInfoByLabel(driver, "Total"), "$2,460.00");
+
+		log.info("TC_07_ReOrderProduct - Step 16: Check on 'Term service' checkbox");
+		shoppingCartPage.checkOnNopCommerceCheckboxByID(driver, "termsofservice");
+
+		log.info("TC_07_ReOrderProduct - Step 17: Click on 'Check out' button");
+		shoppingCartPage.clickToNopCommerceSubButtonByID(driver, "checkout");
+		checkOutPage = PageGeneratorManager.getCheckOutPage(driver);
+
+		log.info("TC_07_ReOrderProduct - Step 18: Verify 'Billing address' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Billing address"));
+		
+		log.info("TC_07_ReOrderProduct - Step 19: Select existing Billing address");
+		checkOutPage.unCheckOnNopCommerceCheckboxByText(driver, "Ship to the same address");
+		checkOutPage.selectNopCommerceDropdownListByName(driver, "billing_address_id", existingBillAdd);
+
+		log.info("TC_07_ReOrderProduct - Step 20: Click on 'Continue' button");
+		checkOutPage.clickToButtonByID(driver, "billing-buttons-container", "Continue");
+		
+
+		log.info("TC_07_ReOrderProduct - Step 23: Verify 'Shipping address' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Shipping address"));
+		verifyTrue(checkOutPage.isShippingTextDisplayed(driver));
+
+		log.info("TC_07_ReOrderProduct - Step 24: Select existing Shipping address option");
+		checkOutPage.selectNopCommerceDropdownListByName(driver, "shipping_address_id", existingShipAdd);
+
+		log.info("TC_07_ReOrderProduct - Step 25: Click on 'Continue' button");
+		checkOutPage.clickToButtonByID(driver, "shipping-buttons-container", "Continue");
+
+		log.info("TC_07_ReOrderProduct - Step 26: Verify 'Shipping method' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Shipping method"));
+
+		log.info("TC_07_ReOrderProduct - Step 27: Select Shipping method");
+		checkOutPage.clickToNopCommerceRadioButtonByText(driver, "Next Day Air ($0.00)");
+
+		log.info("TC_07_ReOrderProduct - Step 28: Click to 'Continue' button");
+		checkOutPage.clickToButtonByID(driver, "shipping-method-buttons-container", "Continue");
+
+		log.info("TC_07_ReOrderProduct - Step 29: Verify 'Payment method' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Payment method"));
+
+		log.info("TC_07_ReOrderProduct - Step 30: Select Payment method");
+		checkOutPage.clickToNopCommerceRadioButtonByText(driver, "Check / Money Order");
+
+		log.info("TC_07_ReOrderProduct - Step 31: Click on 'Continue' button");
+		checkOutPage.clickToButtonByID(driver, "payment-method-buttons-container", "Continue");
+
+		log.info("TC_07_ReOrderProduct - Step 32: Verify 'Payment information' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Payment information"));
+		verifyTrue(checkOutPage.isPaymentInforDisplayedByText(driver, "Mail Personal or Business Check, Cashier's Check or money order to:"));
+		verifyTrue(checkOutPage.isPaymentInforDisplayedByText(driver, "NOP SOLUTIONS"));
+		verifyTrue(checkOutPage.isPaymentInforDisplayedByText(driver, "your address here,"));
+		verifyTrue(checkOutPage.isPaymentInforDisplayedByText(driver, "New York, NY 10001"));
+		verifyTrue(checkOutPage.isPaymentInforDisplayedByText(driver, "USA"));
+
+		log.info("TC_07_ReOrderProduct - Step 33: Click on 'Continue' button");
+		checkOutPage.clickToButtonByID(driver, "checkout-step-payment-info", "Continue");
+
+		log.info("TC_07_ReOrderProduct - Step 34: Verify 'Confirm order' is displayed");
+		verifyTrue(checkOutPage.isTitleDisplayedByText(driver, "Confirm order"));
+
+		log.info("TC_07_ReOrderProduct - Step 35: Verify Billing information are correct");
+		verifyTrue(checkOutPage.isConfirmOrderTitleDisplayedByText(driver, "billing-info", "Billing Address"));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "name").contains(billFirstName + " " + billLastName));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "email").contains(billEmail));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "phone").contains(billPhone));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "fax").contains(billFax));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "company").contains(billCompany));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "address1").contains(billAdd1));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "address2").contains(billAdd2));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "city-state-zip").contains(billCity + "," + billZipcode));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "billing-info", "country").contains(billCountry));
+
+		log.info("TC_07_ReOrderProduct - Step 36: Verify Payment method is correct");
+		verifyTrue(checkOutPage.isConfirmOrderTitleDisplayedByText(driver, "payment-method-info", "Payment"));
+		verifyTrue(checkOutPage.getConfirmOrderMethodByClass(driver, "payment-method-info", "Payment Method:").contains("Check / Money Order"));
+
+		log.info("TC_07_ReOrderProduct - Step 37: Verify Shipping address are correct");
+		verifyTrue(checkOutPage.isConfirmOrderTitleDisplayedByText(driver, "shipping-info", "Shipping Address"));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "name").contains(shipFirstName + " " + shipLastName));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "email").contains(shipEmail));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "phone").contains(shipPhone));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "fax").contains(shipFax));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "company").contains(shipCompany));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "address1").contains(shipAdd1));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "city-state-zip").contains(shipCity + "," + shipState + "," + shipZipcode));
+		verifyTrue(checkOutPage.getConfirmOrderDetailByClass(driver, "shipping-info", "country").contains(shipCountry));
+
+		log.info("TC_07_ReOrderProduct - Step 38: Verify Shipping method is correct");
+		verifyTrue(checkOutPage.isConfirmOrderTitleDisplayedByText(driver, "shipping-method-info", "Shipping"));
+		verifyTrue(checkOutPage.getConfirmOrderMethodByClass(driver, "shipping-method-info", "Shipping Method:").contains("Next Day Air"));
+
+		log.info("TC_07_ReOrderProduct - Step 39: Verify the Product information are correct");
+		verifyEquals(checkOutPage.getNopCommerceProductInforByColumn(driver, productName4, 1), productCode4);
+		verifyEquals(checkOutPage.getNopCommerceProductNameByText(driver, productName4), productName4);
+		verifyEquals(checkOutPage.getNopCommerceProductInforByColumn(driver, productName4, 4), "$245.00");
+		verifyEquals(checkOutPage.getNopCommerceProductInforByColumn(driver, productName4, 5), "10");
+		verifyEquals(checkOutPage.getNopCommerceProductInforByColumn(driver, productName4, 6), "$2,450.00");
+
+		log.info("TC_07_ReOrderProduct - Step 40: Verify Payment information are correct");
+		verifyTrue(checkOutPage.getCartOptionStatus(driver).contains("Yes [+$10.00]"));
+		verifyEquals(checkOutPage.getTotalInforByText(driver, "total-info", "Sub-Total:"), "$2,460.00");
+		verifyEquals(checkOutPage.getTotalInforByText(driver, "total-info", "Shipping:"), "$0.00");
+		verifyEquals(checkOutPage.getTotalInforByText(driver, "total-info", "Tax:"), "$0.00");
+		verifyEquals(checkOutPage.getTotalInforByText(driver, "total-info", "Total:"), "$2,460.00");
+
+		log.info("TC_07_ReOrderProduct - Step 41: Click to 'Confirm' button");
+		checkOutPage.clickToNopCommerceButtonByValue(driver, "Confirm");
+
+		log.info("TC_07_ReOrderProduct - Step 42: Verify the Product is ordered successfully");
+		verifyEquals(checkOutPage.getCheckOutCompletedPageTitleByClass(driver), "Thank you");
+		verifyEquals(checkOutPage.getCheckOutCompletedDetailByClass(driver, "title"), "Your order has been successfully processed!");
+
+		log.info("TC_07_ReOrderProduct - Step 43: Get Order No");
+		orderNo = checkOutPage.getCheckOutOrderNo(driver, "details");
+		log.info("TC_07_ReOrderProduct - Step 44: Click to Order detail linnk");
+		checkOutPage.clickToNopCommerceLinkByClass(driver, "details-link", "Click here for order details.");
+
+		orderDetailPage = PageGeneratorManager.getOrderDetailPage(driver);
+
+		log.info("TC_07_ReOrderProduct - Step 45: Verify Order information are displayed correctly");
+		verifyTrue(orderDetailPage.getOrderDetailTextByClass(driver, "order-overview", "order-number").contains(orderNo));
+		verifyEquals(orderDetailPage.getOrderDetailTextByClass(driver, "order-overview", "order-number"), "ORDER #" + orderNo);
+		verifyEquals(orderDetailPage.getOrderDetailContentByClass(driver, "order-overview", "order-date"), "Order Date: " +getCSTDateTime());
+		verifyTrue(orderDetailPage.getOrderDetailContentByClass(driver, "order-overview", "order-status").contains("Pending"));
+		verifyEquals(orderDetailPage.getOrderTotalPriceByClass(driver, "order-total"), "$2,460.00");
+
+		log.info("TC_07_ReOrderProduct - Step 46: Verify Billing information / Shipping information are displayed correctly");
+		verifyTrue(orderDetailPage.getOrderDetailContentByClass(driver, "billing-info", "email").contains(billEmail));
+		verifyTrue(orderDetailPage.getOrderDetailContentByClass(driver, "shipping-info", "email").contains(shipEmail));
+		verifyEquals(orderDetailPage.getOrderMethodByClass(driver, "payment-method-info", "payment-method"), "Check / Money Order");
+		verifyEquals(orderDetailPage.getOrderMethodByClass(driver, "shipping-method-info", "shipping-method"), "Next Day Air");
+
+		log.info("TC_07_ReOrderProduct - Step 47: Verify Product's detail are displayed successfully");
+		verifyEquals(orderDetailPage.getNopCommerceProductInforByColumn(driver, productName4, 1), productCode4);
+		verifyEquals(orderDetailPage.getNopCommerceProductNameByText(driver, productName4), productName4);
+		verifyEquals(orderDetailPage.getNopCommerceProductInforByColumn(driver, productName4, 3), "$245.00");
+		verifyEquals(orderDetailPage.getNopCommerceProductInforByColumn(driver, productName4, 4), "10");
+		verifyEquals(orderDetailPage.getNopCommerceProductInforByColumn(driver, productName4, 5), "$2,450.00");
+		verifyTrue(orderDetailPage.getSelectedOptionStatus(driver).contains("Yes [+$10.00]"));
+		verifyEquals(orderDetailPage.getTotalInforByText(driver, "total-info", "Order Total:"), "$2,460.00");
+
 	}
 
 	@AfterClass(alwaysRun = true)

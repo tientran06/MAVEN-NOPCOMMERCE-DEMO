@@ -1,6 +1,8 @@
 package commons;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
@@ -20,18 +22,13 @@ import org.testng.Reporter;
 
 import java.io.File;
 import java.lang.reflect.Array;
+import java.text.SimpleDateFormat;
 import java.time.Clock;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class AbstractTest {
@@ -296,6 +293,10 @@ public class AbstractTest {
 		return ran.nextInt(5000);
 	}
 
+	protected String randomNumber7Digits() {
+		return RandomStringUtils.randomNumeric(7);
+	}
+	
 	public void overrideTimeout(WebDriver driver, long timeOut) {
 		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
 	}
@@ -364,18 +365,22 @@ public class AbstractTest {
 		int year = now.getYear();
 		return String.valueOf(year);
 	}
-	
+
 	protected String getToday() {
 		return getCurrentYear() + "-" + getCurrentMonth() + "-" + getCurrentDay();
 	}
-	
+
 	protected String getTodayFormat() {
-		//DateTime now = new DateTime(DateTimeZone.UTC);
 		LocalDateTime myDate = LocalDateTime.now(Clock.systemUTC());
 		DateTimeFormatter myDateTimeFormat = DateTimeFormatter.ofPattern("EEEE, MMMM dd, yyyy");
 		String formattedDate = myDate.format(myDateTimeFormat);
-		return  formattedDate;
+		return formattedDate;
 	}
 
-	
+	protected String getCSTDateTime() {
+		SimpleDateFormat formatCST = new SimpleDateFormat("EEEE, MMMM dd, yyyy");
+		formatCST.setTimeZone(TimeZone.getTimeZone("CST"));
+		String formattedDate = formatCST.format(new Date());
+		return formattedDate;
+	}
 }

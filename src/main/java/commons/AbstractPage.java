@@ -503,6 +503,7 @@ public class AbstractPage {
 	}
 
 	public void selectDefaultDropdownListByValue(WebDriver driver, String locator, String valueItem, String... values) {
+		waitForElementVisible(driver, locator, values);
 		element = findElementByXpath(driver, locator, values);
 		select = new Select(element);
 		select.selectByValue(valueItem);
@@ -964,5 +965,15 @@ public class AbstractPage {
 	public void setNopCommerceValueForTextBoxByID(WebDriver driver, String idValue, String textValue) {
 		waitForElementVisible(driver, AbstractPageNopCommerceUI.DYNAMIC_TEXTBOX, idValue);
 		setAttributeValueByJS(driver, AbstractPageNopCommerceUI.DYNAMIC_TEXTBOX, "value", textValue, idValue);
+	}
+
+	public void selectNopCommerceDropdownListByValue(WebDriver driver, String dropdownName, String valueID) {
+		waitForElementPresence(driver, AbstractPageNopCommerceUI.DYNAMIC_DROPDOWN_LIST, dropdownName);
+		selectDefaultDropdownListByValue(driver, AbstractPageNopCommerceUI.DYNAMIC_DROPDOWN_LIST, valueID, dropdownName);
+	}
+
+	public void clickToNopCommerceSubButtonByID(WebDriver driver, String idValue) {
+		waitForElementClickable(driver, AbstractPageNopCommerceUI.DYNAMIC_DETAIL_BUTTON_ID, idValue);
+		clickToElement(driver, AbstractPageNopCommerceUI.DYNAMIC_DETAIL_BUTTON_ID, idValue);
 	}
 }
