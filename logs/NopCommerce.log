@@ -20638,3 +20638,241 @@ Driver info: driver.version: RemoteWebDriver
 [INFO ] [2021-04-17 12:49:00,168]  -------------------------- PASSED -------------------------- 
 [INFO ] [2021-04-17 12:49:00,171] OS Name = windows 10
 [INFO ] [2021-04-17 12:49:01,324] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-04-17 16:26:00,297]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:26:07,683]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:26:09,624] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-04-17 16:26:13,741]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:26:17,796] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-04-17 16:26:23,977]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:26:26,142] TC_01_SortWithNameAscending - Step 01: Select item 'Name: A to Z' from DropDown list
+[INFO ] [2021-04-17 16:26:28,706] TC_01_SortWithNameAscending - Step 01: Verify Product Names are sorted Ascending
+[INFO ] [2021-04-17 16:26:29,121]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:26:31,442] TC_02_SortWithNameDescending - Step 01: Select item 'Name: Z to A' from DropDown list
+[INFO ] [2021-04-17 16:26:33,775] TC_02_SortWithNameDescending - Step 02:Verify Product Names are sorted Descending
+[INFO ] [2021-04-17 16:26:33,979]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:26:34,426] OS Name = windows 10
+[INFO ] [2021-04-17 16:26:34,931] TC_03_SortWithPriceLowToHigh - Step 01: Select item 'Price: Low to High' from DropDown list
+[INFO ] [2021-04-17 16:26:35,743] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-04-17 16:26:37,165] TC_03_SortWithPriceLowToHigh - Step 02: Verify the Product prices are sorted Ascending
+[INFO ] [2021-04-17 16:26:49,512] OS Name = windows 10
+[INFO ] [2021-04-17 16:26:53,604] java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:11558
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.44.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: driver.version: RemoteWebDriver
+[INFO ] [2021-04-17 16:28:37,065]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:28:45,066] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-04-17 16:28:49,788]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:28:51,930] TC_01_SortWithNameAscending - Step 01: Select item 'Name: A to Z' from DropDown list
+[INFO ] [2021-04-17 16:28:54,173] TC_01_SortWithNameAscending - Step 01: Verify Product Names are sorted Ascending
+[INFO ] [2021-04-17 16:28:54,357]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:28:55,217] TC_02_SortWithNameDescending - Step 01: Select item 'Name: Z to A' from DropDown list
+[INFO ] [2021-04-17 16:28:57,349] TC_02_SortWithNameDescending - Step 02:Verify Product Names are sorted Descending
+[INFO ] [2021-04-17 16:28:57,522]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:28:59,274] TC_03_SortWithPriceLowToHigh - Step 01: Select item 'Price: Low to High' from DropDown list
+[INFO ] [2021-04-17 16:29:01,441] TC_03_SortWithPriceLowToHigh - Step 02: Verify the Product prices are sorted Ascending
+[INFO ] [2021-04-17 16:29:01,585]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:29:03,426] TC_04_SortWithPriceHighToLow - Step 01: Select item 'Price: Low to High' from DropDown List
+[INFO ] [2021-04-17 16:29:05,596] TC_04_SortWithPriceHighToLow - Step 02: Verify Products Prices are sorted Descending
+[INFO ] [2021-04-17 16:29:05,716]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-04-17 16:29:10,012] OS Name = windows 10
+[INFO ] [2021-04-17 16:29:11,471] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-04-17 16:33:44,539]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:33:53,023] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-04-17 16:33:58,044]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:33:59,951] TC_01_SortWithNameAscending - Step 01: Select item 'Name: A to Z' from DropDown list
+[INFO ] [2021-04-17 16:34:02,117] TC_01_SortWithNameAscending - Step 01: Verify Product Names are sorted Ascending
+[INFO ] [2021-04-17 16:34:02,250]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:34:03,858] TC_02_SortWithNameDescending - Step 01: Select item 'Name: Z to A' from DropDown list
+[INFO ] [2021-04-17 16:34:06,017] TC_02_SortWithNameDescending - Step 02:Verify Product Names are sorted Descending
+[INFO ] [2021-04-17 16:34:06,152]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:34:08,044] TC_03_SortWithPriceLowToHigh - Step 01: Select item 'Price: Low to High' from DropDown list
+[INFO ] [2021-04-17 16:34:10,213] TC_03_SortWithPriceLowToHigh - Step 02: Verify the Product prices are sorted Ascending
+[INFO ] [2021-04-17 16:34:10,335]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:34:50,889] OS Name = windows 10
+[INFO ] [2021-04-17 16:34:52,410] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-04-17 16:37:06,645]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:37:19,523] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-04-17 16:37:23,502]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:37:25,402] TC_01_SortWithNameAscending - Step 01: Select item 'Name: A to Z' from DropDown list
+[INFO ] [2021-04-17 16:37:27,607] TC_01_SortWithNameAscending - Step 01: Verify Product Names are sorted Ascending
+[INFO ] [2021-04-17 16:37:27,755]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:37:29,440] TC_02_SortWithNameDescending - Step 01: Select item 'Name: Z to A' from DropDown list
+[INFO ] [2021-04-17 16:37:31,629] TC_02_SortWithNameDescending - Step 02:Verify Product Names are sorted Descending
+[INFO ] [2021-04-17 16:37:31,769]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:37:32,591] TC_03_SortWithPriceLowToHigh - Step 01: Select item 'Price: Low to High' from DropDown list
+[INFO ] [2021-04-17 16:37:34,718] TC_03_SortWithPriceLowToHigh - Step 02: Verify the Product prices are sorted Ascending
+[INFO ] [2021-04-17 16:37:34,848]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:37:35,716] TC_04_SortWithPriceHighToLow - Step 01: Select item 'Price: High to Low' from DropDown List
+[INFO ] [2021-04-17 16:37:37,894] TC_04_SortWithPriceHighToLow - Step 02: Verify Products Prices are sorted Descending
+[INFO ] [2021-04-17 16:37:38,026]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:37:40,338] OS Name = windows 10
+[INFO ] [2021-04-17 16:37:41,630] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-04-17 16:40:58,858]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:41:09,492] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-04-17 16:41:12,774]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:41:13,944] TC_01_SortWithNameAscending - Step 01: Select item 'Name: A to Z' from DropDown list
+[INFO ] [2021-04-17 16:41:16,180] TC_01_SortWithNameAscending - Step 02: Verify Product Names are sorted Ascending
+[INFO ] [2021-04-17 16:41:16,329]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:41:17,925] TC_02_SortWithNameDescending - Step 01: Select item 'Name: Z to A' from DropDown list
+[INFO ] [2021-04-17 16:41:20,125] TC_02_SortWithNameDescending - Step 02:Verify Product Names are sorted Descending
+[INFO ] [2021-04-17 16:41:20,229]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:41:21,102] TC_03_SortWithPriceLowToHigh - Step 01: Select item 'Price: Low to High' from DropDown list
+[INFO ] [2021-04-17 16:41:23,227] TC_03_SortWithPriceLowToHigh - Step 02: Verify the Product prices are sorted Ascending
+[INFO ] [2021-04-17 16:41:23,358]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:41:24,866] TC_04_SortWithPriceHighToLow - Step 01: Select item 'Price: High to Low' from DropDown List
+[INFO ] [2021-04-17 16:41:26,984] TC_04_SortWithPriceHighToLow - Step 02: Verify Products Prices are sorted Descending
+[INFO ] [2021-04-17 16:41:27,109]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 16:41:31,187] OS Name = windows 10
+[INFO ] [2021-04-17 16:41:32,509] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-04-17 18:57:05,664]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:57:21,397] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-04-17 18:57:29,175]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:57:33,805] TC_01_SortWithNameAscending - Step 01: Select item 'Name: A to Z' from DropDown list
+[INFO ] [2021-04-17 18:57:35,998] TC_01_SortWithNameAscending - Step 02: Verify Product Names are sorted Ascending
+[INFO ] [2021-04-17 18:57:36,103]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:57:37,797] TC_02_SortWithNameDescending - Step 01: Select item 'Name: Z to A' from DropDown list
+[INFO ] [2021-04-17 18:57:39,949] TC_02_SortWithNameDescending - Step 02:Verify Product Names are sorted Descending
+[INFO ] [2021-04-17 18:57:40,076]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:57:40,934] TC_03_SortWithPriceLowToHigh - Step 01: Select item 'Price: Low to High' from DropDown list
+[INFO ] [2021-04-17 18:57:43,054] TC_03_SortWithPriceLowToHigh - Step 02: Verify the Product prices are sorted Ascending
+[INFO ] [2021-04-17 18:57:43,198]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:57:45,245] TC_04_SortWithPriceHighToLow - Step 01: Select item 'Price: High to Low' from DropDown List
+[INFO ] [2021-04-17 18:57:47,381] TC_04_SortWithPriceHighToLow - Step 02: Verify Products Prices are sorted Descending
+[INFO ] [2021-04-17 18:57:47,530]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:57:48,907] TC_05_DisplayWith3ProductFor1Page - Step 01: Select pagezise '3' from Dropdown List
+[INFO ] [2021-04-17 18:57:49,066] TC_05_DisplayWith3ProductFor1Page - Step 02: Verify Products are displayed less or equal 3 
+[INFO ] [2021-04-17 18:57:49,090]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-04-17 18:57:49,091] TC_05_DisplayWith3ProductFor1Page - Step 03: Verify paging (Next icon) is displayed on Page number 1
+[INFO ] [2021-04-17 18:57:49,775]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:57:49,847]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:57:49,848] TC_05_DisplayWith3ProductFor1Page - Step 04: Click to page number 2
+[INFO ] [2021-04-17 18:57:49,963] TC_05_DisplayWith3ProductFor1Page - Step 05: Verify page (Next icon) is undisplayed and (Previous icon) is displayed on Page number 2
+[INFO ] [2021-04-17 18:57:50,023]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-04-17 18:57:57,219]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:57:57,294]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:57:58,212] TC_06_DisplayWith6ProductFor1Page - Step 01: Select pagezise '6' from Dropdown List
+[INFO ] [2021-04-17 18:57:58,286] TC_06_DisplayWith6ProductFor1Page - Step 02: Verify Products are displayed less or equal 6
+[INFO ] [2021-04-17 18:57:58,298]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:57:58,298] TC_06_DisplayWith6ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-04-17 18:58:04,383]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:58:06,221] TC_07_DisplayWith9ProductFor1Page - Step 01: Select pagezise '9' from Dropdown List
+[INFO ] [2021-04-17 18:58:06,382] TC_07_DisplayWith9ProductFor1Page - Step 02: Verify Products are displayed less or equal 9
+[INFO ] [2021-04-17 18:58:06,400]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:58:06,400] TC_07_DisplayWith9ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-04-17 18:58:12,489]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 18:58:12,491] OS Name = windows 10
+[INFO ] [2021-04-17 18:58:13,789] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-04-17 19:04:40,912]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:04:51,862] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-04-17 19:04:55,791]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:04:59,251] TC_01_SortWithNameAscending - Step 01: Select item 'Name: A to Z' from DropDown list
+[INFO ] [2021-04-17 19:05:01,400] TC_01_SortWithNameAscending - Step 02: Verify Product Names are sorted Ascending
+[INFO ] [2021-04-17 19:05:01,513]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:03,666] TC_02_SortWithNameDescending - Step 01: Select item 'Name: Z to A' from DropDown list
+[INFO ] [2021-04-17 19:05:05,838] TC_02_SortWithNameDescending - Step 02:Verify Product Names are sorted Descending
+[INFO ] [2021-04-17 19:05:05,980]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:08,288] TC_03_SortWithPriceLowToHigh - Step 01: Select item 'Price: Low to High' from DropDown list
+[INFO ] [2021-04-17 19:05:10,410] TC_03_SortWithPriceLowToHigh - Step 02: Verify the Product prices are sorted Ascending
+[INFO ] [2021-04-17 19:05:10,543]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:11,326] TC_04_SortWithPriceHighToLow - Step 01: Select item 'Price: High to Low' from DropDown List
+[INFO ] [2021-04-17 19:05:13,469] TC_04_SortWithPriceHighToLow - Step 02: Verify Products Prices are sorted Descending
+[INFO ] [2021-04-17 19:05:13,611]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:14,434] TC_05_DisplayWith3ProductFor1Page - Step 01: Select pagezise '3' from Dropdown List
+[INFO ] [2021-04-17 19:05:16,558] TC_05_DisplayWith3ProductFor1Page - Step 02: Verify Products are displayed less or equal 3 
+[INFO ] [2021-04-17 19:05:16,585]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:16,586] TC_05_DisplayWith3ProductFor1Page - Step 03: Verify paging (Next icon) is displayed on Page number 1
+[INFO ] [2021-04-17 19:05:16,673]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:16,754]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:16,754] TC_05_DisplayWith3ProductFor1Page - Step 04: Click to page number 2
+[INFO ] [2021-04-17 19:05:18,943] TC_05_DisplayWith3ProductFor1Page - Step 05: Verify page (Next icon) is undisplayed and (Previous icon) is displayed on Page number 2
+[INFO ] [2021-04-17 19:05:19,033]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:25,177]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:25,239]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:26,123] TC_06_DisplayWith6ProductFor1Page - Step 01: Select pagezise '6' from Dropdown List
+[INFO ] [2021-04-17 19:05:28,210] TC_06_DisplayWith6ProductFor1Page - Step 02: Verify Products are displayed less or equal 6
+[INFO ] [2021-04-17 19:05:28,226]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:28,227] TC_06_DisplayWith6ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-04-17 19:05:34,315]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:35,170] TC_07_DisplayWith9ProductFor1Page - Step 01: Select pagezise '9' from Dropdown List
+[INFO ] [2021-04-17 19:05:37,288] TC_07_DisplayWith9ProductFor1Page - Step 02: Verify Products are displayed less or equal 9
+[INFO ] [2021-04-17 19:05:37,313]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:37,313] TC_07_DisplayWith9ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-04-17 19:05:43,442]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:05:43,443] OS Name = windows 10
+[INFO ] [2021-04-17 19:05:44,676] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-04-17 19:08:52,929]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:03,563] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-04-17 19:09:07,555]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:09,634] TC_01_SortWithNameAscending - Step 01: Select item 'Name: A to Z' from DropDown list
+[INFO ] [2021-04-17 19:09:11,782] TC_01_SortWithNameAscending - Step 02: Verify Product Names are sorted Ascending
+[INFO ] [2021-04-17 19:09:11,901]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:13,597] TC_02_SortWithNameDescending - Step 01: Select item 'Name: Z to A' from DropDown list
+[INFO ] [2021-04-17 19:09:15,745] TC_02_SortWithNameDescending - Step 02:Verify Product Names are sorted Descending
+[INFO ] [2021-04-17 19:09:15,845]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:17,529] TC_03_SortWithPriceLowToHigh - Step 01: Select item 'Price: Low to High' from DropDown list
+[INFO ] [2021-04-17 19:09:19,719] TC_03_SortWithPriceLowToHigh - Step 02: Verify the Product prices are sorted Ascending
+[INFO ] [2021-04-17 19:09:19,866]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:20,676] TC_04_SortWithPriceHighToLow - Step 01: Select item 'Price: High to Low' from DropDown List
+[INFO ] [2021-04-17 19:09:22,809] TC_04_SortWithPriceHighToLow - Step 02: Verify Products Prices are sorted Descending
+[INFO ] [2021-04-17 19:09:22,924]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:23,690] TC_05_DisplayWith3ProductFor1Page - Step 01: Select pagezise '3' from Dropdown List
+[INFO ] [2021-04-17 19:09:25,820] TC_05_DisplayWith3ProductFor1Page - Step 02: Verify Products are displayed less or equal 3 
+[INFO ] [2021-04-17 19:09:25,848]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-04-17 19:09:25,850] TC_05_DisplayWith3ProductFor1Page - Step 03: Verify paging (Next icon) is displayed on Page number 1
+[INFO ] [2021-04-17 19:09:25,921]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:25,980]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:25,981] TC_05_DisplayWith3ProductFor1Page - Step 04: Click to page number 2
+[INFO ] [2021-04-17 19:09:28,122] TC_05_DisplayWith3ProductFor1Page - Step 05: Verify page (Next icon) is undisplayed and (Previous icon) is displayed on Page number 2
+[INFO ] [2021-04-17 19:09:28,190]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:34,358]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:34,443]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:35,354] TC_06_DisplayWith6ProductFor1Page - Step 01: Select pagezise '6' from Dropdown List
+[INFO ] [2021-04-17 19:09:37,461] TC_06_DisplayWith6ProductFor1Page - Step 02: Verify Products are displayed less or equal 6
+[INFO ] [2021-04-17 19:09:37,480]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:37,481] TC_06_DisplayWith6ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-04-17 19:09:43,553]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:44,514] TC_07_DisplayWith9ProductFor1Page - Step 01: Select pagezise '9' from Dropdown List
+[INFO ] [2021-04-17 19:09:46,634] TC_07_DisplayWith9ProductFor1Page - Step 02: Verify Products are displayed less or equal 9
+[INFO ] [2021-04-17 19:09:46,651]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:46,651] TC_07_DisplayWith9ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-04-17 19:09:52,725]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 19:09:52,727] OS Name = windows 10
+[INFO ] [2021-04-17 19:09:54,331] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-04-17 22:27:56,868]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:04,751] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-04-17 22:28:09,541]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:10,712] TC_01_SortWithNameAscending - Step 01: Select item 'Name: A to Z' from DropDown list
+[INFO ] [2021-04-17 22:28:12,903] TC_01_SortWithNameAscending - Step 02: Verify Product Names are sorted Ascending
+[INFO ] [2021-04-17 22:28:13,043]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:13,937] TC_02_SortWithNameDescending - Step 01: Select item 'Name: Z to A' from DropDown list
+[INFO ] [2021-04-17 22:28:16,064] TC_02_SortWithNameDescending - Step 02:Verify Product Names are sorted Descending
+[INFO ] [2021-04-17 22:28:16,193]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:17,792] TC_03_SortWithPriceLowToHigh - Step 01: Select item 'Price: Low to High' from DropDown list
+[INFO ] [2021-04-17 22:28:19,924] TC_03_SortWithPriceLowToHigh - Step 02: Verify the Product prices are sorted Ascending
+[INFO ] [2021-04-17 22:28:20,064]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:20,887] TC_04_SortWithPriceHighToLow - Step 01: Select item 'Price: High to Low' from DropDown List
+[INFO ] [2021-04-17 22:28:23,003] TC_04_SortWithPriceHighToLow - Step 02: Verify Products Prices are sorted Descending
+[INFO ] [2021-04-17 22:28:23,169]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:24,048] TC_05_DisplayWith3ProductFor1Page - Step 01: Select pagezise '3' from Dropdown List
+[INFO ] [2021-04-17 22:28:26,165] TC_05_DisplayWith3ProductFor1Page - Step 02: Verify Products are displayed less or equal 3 
+[INFO ] [2021-04-17 22:28:26,196]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:26,196] TC_05_DisplayWith3ProductFor1Page - Step 03: Verify paging (Next icon) is displayed on Page number 1
+[INFO ] [2021-04-17 22:28:26,289]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:26,346]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:26,347] TC_05_DisplayWith3ProductFor1Page - Step 04: Click to page number 2
+[INFO ] [2021-04-17 22:28:28,514] TC_05_DisplayWith3ProductFor1Page - Step 05: Verify page (Next icon) is undisplayed and (Previous icon) is displayed on Page number 2
+[INFO ] [2021-04-17 22:28:28,619]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:34,719]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:34,818]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:35,603] TC_06_DisplayWith6ProductFor1Page - Step 01: Select pagezise '6' from Dropdown List
+[INFO ] [2021-04-17 22:28:37,702] TC_06_DisplayWith6ProductFor1Page - Step 02: Verify Products are displayed less or equal 6
+[INFO ] [2021-04-17 22:28:37,730]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:37,730] TC_06_DisplayWith6ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-04-17 22:28:43,777]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:44,854] TC_07_DisplayWith9ProductFor1Page - Step 01: Select pagezise '9' from Dropdown List
+[INFO ] [2021-04-17 22:28:46,973] TC_07_DisplayWith9ProductFor1Page - Step 02: Verify Products are displayed less or equal 9
+[INFO ] [2021-04-17 22:28:47,005]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:47,006] TC_07_DisplayWith9ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-04-17 22:28:53,103]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-04-17 22:28:53,104] OS Name = windows 10
+[INFO ] [2021-04-17 22:28:54,306] ---------------------- QUIT BROWSER SUCCESS ----------------------

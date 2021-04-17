@@ -65,6 +65,12 @@ public class AbstractPageNopCommerceUI {
 	public static final String DYNAMIC_PRODUCT_DETAIL = "//tr//td[@class = 'product']//a[text() = '%s']";
 	public static final String DYNAMIC_PRODUCT_INFOR = "//tbody//td[@class = 'product']/a[text() = '%s']//ancestor::tr/preceding-sibling::tr";
 
+	// Product Titles
+	public static final String PRODUCT_TITLES = "//div[@class = 'product-item']//h2/a";
+
+	// Product Prices
+	public static final String PRODUCT_PRICES = "//div[@class = 'product-item']//div[@class = 'prices']/span";
+
 	//Sub Button
 	//public static final String DYNAMIC_SUB_BUTTON = "//a[text() = '%s']/parent::h2//following-sibling::div[@class = 'add-info']//button[@title = '%s']";
 	public static final String DYNAMIC_SUB_BUTTON = "//a[text() = '%s']/parent::h2//following-sibling::div[@class = 'add-info']//button[text() = '%s']";
@@ -73,4 +79,11 @@ public class AbstractPageNopCommerceUI {
 	public static final String DYNAMIC_PRODUCT_ITEM_INFOR = "//a[text() = '%s']/parent::td//following-sibling::td[@class = '%s']";
 
 	public static final String QUANTITY_TEXTBOX = "//div//input[@class = 'qty-input']";
+
+	// Paging icon
+	public static final String DYNAMIC_PAGING_ICON = "//div[@class = 'pager']//a[text() = '%s']";
+	public static final String PAGING_LIST = "//div[@class = 'pager']//ul//li";
+
+	// Current Page
+	public static final String CURRENT_PAGE = "//div[@class = 'pager']//ul//li[@class = 'current-page']/span";
 }

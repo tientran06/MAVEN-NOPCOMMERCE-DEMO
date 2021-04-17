@@ -10,9 +10,8 @@ import pageUIs.nopcommerce.AbstractPageNopCommerceUI;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-import java.util.Date;
 import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class AbstractPage {
@@ -975,5 +974,137 @@ public class AbstractPage {
 	public void clickToNopCommerceSubButtonByID(WebDriver driver, String idValue) {
 		waitForElementClickable(driver, AbstractPageNopCommerceUI.DYNAMIC_DETAIL_BUTTON_ID, idValue);
 		clickToElement(driver, AbstractPageNopCommerceUI.DYNAMIC_DETAIL_BUTTON_ID, idValue);
+	}
+
+	public boolean isNopCommerceProNameSortedAscending(WebDriver driver) {
+		ArrayList<String> arrayList = new ArrayList<String>();
+		List<WebElement> elementList = findElementsByXpath(driver, AbstractPageNopCommerceUI.PRODUCT_TITLES);
+
+		for (WebElement element : elementList) {
+			arrayList.add(element.getText());
+		}
+
+		System.out.println("====================================== ProductNames are sorted on UI ======================================");
+		for(String productName:arrayList){
+			System.out.println(productName);
+		}
+
+		ArrayList<String> sortedList = new ArrayList<String>();
+		for (String child : arrayList) {
+			sortedList.add(child);
+		}
+		Collections.sort(arrayList);
+		return sortedList.equals(arrayList);
+	}
+
+	public boolean isNopCommerceProNameSortedDescending(WebDriver driver) {
+		ArrayList<String> arrayList = new ArrayList<String>();
+		List<WebElement> elementList = findElementsByXpath(driver, AbstractPageNopCommerceUI.PRODUCT_TITLES);
+		for (WebElement element : elementList) {
+			arrayList.add(element.getText());
+		}
+		System.out.println("====================================== ProductNames are sorted on UI ======================================");
+		for(String productName:arrayList){
+			System.out.println(productName);
+		}
+
+		ArrayList<String> sortedList = new ArrayList<String>();
+		// Sort functions in the Website
+		for (String child : arrayList) {
+			sortedList.add(child);
+		}
+		// Sort of Collections
+		Collections.sort(arrayList);
+		Collections.reverse(arrayList);
+		return sortedList.equals(arrayList);
+	}
+
+	public boolean isNopCommerceProPriceSortedAscending(WebDriver driver) {
+		ArrayList<Float> arrayList = new ArrayList<Float>();
+		List<WebElement> elementList = findElementsByXpath(driver, AbstractPageNopCommerceUI.PRODUCT_PRICES);
+
+		for (WebElement element : elementList) {
+			arrayList.add(Float.parseFloat(element.getText().replace("$", "").replace(",", "").trim()));
+		}
+
+		System.out.println("====================================== Product Prices are sorted on UI ======================================");
+		for (Float price : arrayList) {
+			System.out.println(price);
+		}
+		ArrayList<Float> sortedList = new ArrayList<Float>();
+		for (Float child : arrayList) {
+			sortedList.add(child);
+		}
+
+		Collections.sort(arrayList);
+		System.out.println("====================================== Product Prices are in Code ASC ======================================");
+		for (Float price : arrayList) {
+			System.out.println(price);
+		}
+		return sortedList.equals(arrayList);
+	}
+
+	public boolean isNopCommerceProPriceSortedDescending(WebDriver driver) {
+		ArrayList<Float> arrayList = new ArrayList<>();
+		List<WebElement> elementList = findElementsByXpath(driver, AbstractPageNopCommerceUI.PRODUCT_PRICES);
+		for (WebElement element : elementList) {
+			arrayList.add(Float.parseFloat(element.getText().replace("$", "").replace(",", "").trim()));
+		}
+
+		System.out.println("====================================== Product Prices are sorted on UI ======================================");
+		for (Float price : arrayList) {
+			System.out.println(price);
+		}
+		ArrayList<Float> sortedList = new ArrayList<>();
+		for (Float child : arrayList) {
+			sortedList.add(child);
+		}
+		Collections.sort(arrayList);
+		Collections.reverse(arrayList);
+
+		System.out.println("====================================== Product Prices are in Code DESC ======================================");
+		for (Float price : arrayList) {
+			System.out.println(price);
+		}
+		return sortedList.equals(arrayList);
+	}
+
+	public boolean isNopCommerceProductCountDisplayedCorrectly(WebDriver driver, int numberPerPage) {
+		List<WebElement> elementList = findElementsByXpath(driver, AbstractPageNopCommerceUI.PRODUCT_TITLES);
+		int totalProduct = elementList.size();
+		boolean status = true;
+		if(totalProduct <= numberPerPage){
+			status = true;
+		}
+		else {
+			status = false;
+		}
+	return status;
+	}
+
+	public boolean isNopcommercePagingIconDisplayedByText(WebDriver driver, String pagingText) {
+		waitForElementVisible(driver, AbstractPageNopCommerceUI.DYNAMIC_PAGING_ICON, pagingText);
+		return isElementDisplayed(driver, AbstractPageNopCommerceUI.DYNAMIC_PAGING_ICON, pagingText);
+
+	}
+
+	public void clickToNopCommercePageIconByText(WebDriver driver, String pagingText) {
+		waitForElementClickable(driver, AbstractPageNopCommerceUI.DYNAMIC_PAGING_ICON, pagingText);
+		clickToElement(driver, AbstractPageNopCommerceUI.DYNAMIC_PAGING_ICON, pagingText);
+	}
+
+	public String getNopCommerceCurrentPage(WebDriver driver) {
+		waitForElementVisible(driver, AbstractPageNopCommerceUI.CURRENT_PAGE);
+		return getTextElement(driver, AbstractPageNopCommerceUI.CURRENT_PAGE);
+	}
+
+	public boolean isNopcommercePagingIconUnDisplayedByText(WebDriver driver, String pagingText) {
+		waitForElementInvisible(driver, AbstractPageNopCommerceUI.DYNAMIC_PAGING_ICON, pagingText);
+		return isElementUnDisplayed(driver, AbstractPageNopCommerceUI.DYNAMIC_PAGING_ICON, pagingText);
+	}
+
+	public boolean isNopcommercePagingIconUnDisplayed(WebDriver driver) {
+		waitForElementInvisible(driver, AbstractPageNopCommerceUI.PAGING_LIST);
+		return isElementUnDisplayed(driver, AbstractPageNopCommerceUI.PAGING_LIST);
 	}
 }

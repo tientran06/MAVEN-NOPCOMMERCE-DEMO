@@ -25,13 +25,14 @@
 		<!-- <packages> <package name="com.nopcommerce.search"/> </packages> -->
 		<classes>
 
-			<class name="com.nopcommerce.common.Common_01_RegisterUser" />
-<!--			<class name="com.nopcommerce.login.Login_01_Register" />-->
-<!--			<class name="com.nopcommerce.login.Login_02_Login" />-->
-<!--			<class name="com.nopcommerce.others.Others_02_SearchData" />-->
-<!--			<class name="com.nopcommerce.others.Others_03_WishlistAndCompare" />-->
-			<class name="com.nopcommerce.others.Others_04_Order" />
-<!--			<class name="com.nopcommerce.others.Others_01_MyAccount" />-->
+			<class name="com.nopcommerce.common.Common_01_RegisterUser"/>
+			<!--			<class name="com.nopcommerce.login.Login_01_Register" />-->
+			<!--			<class name="com.nopcommerce.login.Login_02_Login" />-->
+			<!--			<class name="com.nopcommerce.others.Others_02_SearchData" />-->
+			<!--			<class name="com.nopcommerce.others.Others_03_WishlistAndCompare" />-->
+			<!--			<class name="com.nopcommerce.others.Others_04_Order" />-->
+			<class name="com.nopcommerce.others.Others_05_SortAndPaging"/>
+			<!--			<class name="com.nopcommerce.others.Others_01_MyAccount" />-->
 		</classes>
 
 	</test>
