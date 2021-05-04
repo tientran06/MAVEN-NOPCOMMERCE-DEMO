@@ -1,0 +1,510 @@
+<html>
+<head>
+<title>TestNG:  Run on CHROME</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Run on CHROME</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/1/2</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Apr 14 22:10:36 ICT 2021</td>
+</tr>
+<tr><td>Total time:</td><td>193 seconds (193832 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nopcommerce.others.Others_04_Order.TC_05_CheckOutOrderProductByCheque()'><b>TC_05_CheckOutOrderProductByCheque</b><br>Test class: com.nopcommerce.others.Others_04_Order<br/>
+<a href="#Output-1717967062" onClick='toggleBox("Output-1717967062", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1717967062" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1717967062">
+[INFO ] [2021-04-14 22:12:56,297] TC_05_CheckOutOrderProductByCheque - Step 01: Click to 'Notebooks' menu
+<br/>
+[INFO ] [2021-04-14 22:12:57,572] TC_05_CheckOutOrderProductByCheque - Step 02: Click to Product's link
+<br/>
+[INFO ] [2021-04-14 22:12:59,104] TC_05_CheckOutOrderProductByCheque - Step 03: Click to 'Add to cart' button
+<br/>
+[INFO ] [2021-04-14 22:12:59,302] TC_05_CheckOutOrderProductByCheque - Step 04: Verify the Product is added into 'Shopping cart' successfully
+<br/>
+[INFO ] [2021-04-14 22:13:00,398] TC_05_CheckOutOrderProductByCheque - Step 05: Click to 'Shopping cart' link
+<br/>
+[INFO ] [2021-04-14 22:13:01,785] TC_05_CheckOutOrderProductByCheque - Step 06: Verify Product's Name is displayed
+<br/>
+[INFO ] [2021-04-14 22:13:01,916]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:13:01,922] TC_05_CheckOutOrderProductByCheque - Step 07: Verify Product's Code is correct
+<br/>
+[INFO ] [2021-04-14 22:13:05,045]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:13:05,049] TC_05_CheckOutOrderProductByCheque - Step 08: Verify Product's price is correct
+<br/>
+[INFO ] [2021-04-14 22:13:08,214]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:13:08,223] TC_05_CheckOutOrderProductByCheque - Step 09: Verify Product's quantity is correct
+<br/>
+[INFO ] [2021-04-14 22:13:11,364]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:13:11,368] TC_05_CheckOutOrderProductByCheque - Step 10: Verify Product's total price is correct
+<br/>
+[INFO ] [2021-04-14 22:13:14,524]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:13:14,537] TC_05_CheckOutOrderProductByCheque - Step 11: Select 'Gift wrapping' option
+<br/>
+[INFO ] [2021-04-14 22:13:14,796] TC_05_CheckOutOrderProductByCheque - Step 12: Check on 'Term service' checkbox
+<br/>
+[INFO ] [2021-04-14 22:13:15,189] TC_05_CheckOutOrderProductByCheque - Step 13: Click on 'Check out' button
+<br/>
+[INFO ] [2021-04-14 22:13:19,013] TC_05_CheckOutOrderProductByCheque - Step 14: Verify 'Billing address' is displayed
+<br/>
+[INFO ] [2021-04-14 22:13:19,095]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:13:19,096] TC_05_CheckOutOrderProductByCheque - Step 15: Input required information of Billing address
+<br/>
+[INFO ] [2021-04-14 22:13:31,122] TC_05_CheckOutOrderProductByCheque - Step 16: Click on 'Continue' button
+<br/>
+[INFO ] [2021-04-14 22:13:31,347] TC_05_CheckOutOrderProductByCheque - Step 17: Verify 'Shipping address' is displayed
+<br/>
+[INFO ] [2021-04-14 22:13:31,535]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:13:32,838]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:13:32,838] TC_05_CheckOutOrderProductByCheque - Step 18: Select 'New Address' option
+<br/>
+[INFO ] [2021-04-14 22:13:32,997] TC_05_CheckOutOrderProductByCheque - Step 19: Input required field of Shipping address
+<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:11206
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.44.114&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at commons.AbstractPage.findElementByXpath(AbstractPage.java:78)
+	at commons.AbstractPage.selectDefaultDropdownListByVisibleText(AbstractPage.java:494)
+	at commons.AbstractPage.selectNopCommerceDropdownListByName(AbstractPage.java:813)
+	at com.nopcommerce.others.Others_04_Order.TC_05_CheckOutOrderProductByCheque(Others_04_Order.java:380)
+Caused by: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:11206
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+	at okhttp3.RealCall.execute(RealCall.java:77)
+	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	... 34 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+	... 54 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1717967062", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1717967062'><pre>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:11206
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.44.114&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at commons.AbstractPage.findElementByXpath(AbstractPage.java:78)
+	at commons.AbstractPage.selectDefaultDropdownListByVisibleText(AbstractPage.java:494)
+	at commons.AbstractPage.selectNopCommerceDropdownListByName(AbstractPage.java:813)
+	at com.nopcommerce.others.Others_04_Order.TC_05_CheckOutOrderProductByCheque(Others_04_Order.java:380)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:11206
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+	at okhttp3.RealCall.execute(RealCall.java:77)
+	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	... 34 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+	... 54 more
+</pre></div></td>
+<td>50</td>
+<td>com.nopcommerce.others.Others_04_Order@5db6b9cd</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nopcommerce.others.Others_04_Order.TC_01_AddProductToCartWithDetail()'><b>TC_01_AddProductToCartWithDetail</b><br>Test class: com.nopcommerce.others.Others_04_Order<br/>
+<a href="#Output-1007402143" onClick='toggleBox("Output-1007402143", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1007402143" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1007402143">
+[INFO ] [2021-04-14 22:10:55,864] TC_01_AddProductToCartWithDetail - Step 01: Click to 'Desktops' Menu
+<br/>
+[INFO ] [2021-04-14 22:10:58,851] TC_01_AddProductToCartWithDetail - Step 02: Click to Product link
+<br/>
+[INFO ] [2021-04-14 22:11:02,548] TC_01_AddProductToCartWithDetail - Step 03: Select required fields
+<br/>
+[INFO ] [2021-04-14 22:11:04,350] TC_01_AddProductToCartWithDetail - Step 04: Click 'Add to cart' button
+<br/>
+[INFO ] [2021-04-14 22:11:04,712] TC_01_AddProductToCartWithDetail - Step 05: Verify the Product is added to cart successfully
+<br/>
+[INFO ] [2021-04-14 22:11:05,467] TC_01_AddProductToCartWithDetail - Step 06: Click to 'Shopping cart' link
+<br/>
+[INFO ] [2021-04-14 22:11:07,919] TC_01_AddProductToCartWithDetail - Step 07: Verify Product Name is displayed in Shopping cart
+<br/>
+[INFO ] [2021-04-14 22:11:08,340]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:08,353] TC_01_AddProductToCartWithDetail - Step 08: Verify the Product's price in Shopping cart
+<br/>
+[INFO ] [2021-04-14 22:11:11,507]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:11,529] TC_01_AddProductToCartWithDetail - Step 09: Verify the Product's Total price in Shopping cart
+<br/>
+[INFO ] [2021-04-14 22:11:14,778]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:14,784] TC_01_AddProductToCartWithDetail - Step 10: Verify Product information is the same with the selection in Shopping cart
+<br/>
+[INFO ] [2021-04-14 22:11:17,899]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:21,059]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:24,360]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:27,469]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:31,401]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:31,402] TC_01_AddProductToCartWithDetail - Step 11: Back to the Home page 
+<br/>
+</div>
+</td>
+<td></td>
+<td>37</td>
+<td>com.nopcommerce.others.Others_04_Order@5db6b9cd</td></tr>
+<tr>
+<td title='com.nopcommerce.others.Others_04_Order.TC_02_EditProductInShoppingCart()'><b>TC_02_EditProductInShoppingCart</b><br>Test class: com.nopcommerce.others.Others_04_Order<br/>
+<a href="#Output-847841178" onClick='toggleBox("Output-847841178", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-847841178" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-847841178">
+[INFO ] [2021-04-14 22:11:33,430] TC_02_EditProductInShoppingCart - Step 01: Click to 'Shopping cart' Header link
+<br/>
+[INFO ] [2021-04-14 22:11:35,393] TC_02_EditProductInShoppingCart - Step 02: Click to 'Edit' link
+<br/>
+[INFO ] [2021-04-14 22:11:37,351] TC_02_EditProductInShoppingCart - Step 03: Edit Product's information
+<br/>
+[INFO ] [2021-04-14 22:11:40,119] TC_02_EditProductInShoppingCart - Step 03: Click to 'Update' button
+<br/>
+[INFO ] [2021-04-14 22:11:40,332] TC_02_EditProductInShoppingCart - Step 04: Verify the Product is added into 'Shopping cart' successfully
+<br/>
+[INFO ] [2021-04-14 22:11:40,832] TC_02_EditProductInShoppingCart - Step 05: Click to 'Shopping cart' button
+<br/>
+[INFO ] [2021-04-14 22:11:42,012] TC_02_EditProductInShoppingCart - Step 06: Verify Product Name is displayed successfully
+<br/>
+[INFO ] [2021-04-14 22:11:42,092]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:42,096] TC_02_EditProductInShoppingCart - Step 07: Verify the Price after editting the Product
+<br/>
+[INFO ] [2021-04-14 22:11:45,222]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:45,227] TC_02_EditProductInShoppingCart - Step 08: Verify the Quatity after editting the Product
+<br/>
+[INFO ] [2021-04-14 22:11:48,301]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:48,305] TC_02_EditProductInShoppingCart - Step 09: Verify the Total price after editting the Product
+<br/>
+[INFO ] [2021-04-14 22:11:51,432]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:51,436] TC_02_EditProductInShoppingCart - Step 10: Verify the Product's detail are correct
+<br/>
+[INFO ] [2021-04-14 22:11:54,574]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:11:57,705]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:00,818]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:03,891]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:06,999]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:07,000] TC_02_EditProductInShoppingCart - Step 11: Back to the Home page
+<br/>
+</div>
+</td>
+<td></td>
+<td>36</td>
+<td>com.nopcommerce.others.Others_04_Order@5db6b9cd</td></tr>
+<tr>
+<td title='com.nopcommerce.others.Others_04_Order.TC_03_RemoveFromCart()'><b>TC_03_RemoveFromCart</b><br>Test class: com.nopcommerce.others.Others_04_Order<br/>
+<a href="#Output-1526730726" onClick='toggleBox("Output-1526730726", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1526730726" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1526730726">
+[INFO ] [2021-04-14 22:12:09,492] TC_03_RemoveFromCart - Step 01: Click to 'Shopping cart' header link
+<br/>
+[INFO ] [2021-04-14 22:12:11,317] TC_03_RemoveFromCart - Step 02: Click to 'Remove' icon
+<br/>
+[INFO ] [2021-04-14 22:12:15,365] TC_03_RemoveFromCart - Step 03: Verify the Product is removed successfully
+<br/>
+[INFO ] [2021-04-14 22:12:15,470]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:21,601]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:21,601] TC_03_RemoveFromCart - Step 04: Back to Home page
+<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>com.nopcommerce.others.Others_04_Order@5db6b9cd</td></tr>
+<tr>
+<td title='com.nopcommerce.others.Others_04_Order.TC_04_UpdateShoppingCart()'><b>TC_04_UpdateShoppingCart</b><br>Test class: com.nopcommerce.others.Others_04_Order<br/>
+<a href="#Output-423344137" onClick='toggleBox("Output-423344137", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-423344137" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-423344137">
+[INFO ] [2021-04-14 22:12:23,508] TC_04_UpdateShoppingCart - Step 01: Click to 'Desktops' menu
+<br/>
+[INFO ] [2021-04-14 22:12:25,350] TC_04_UpdateShoppingCart - Step 02: Add Product into Cart
+<br/>
+[INFO ] [2021-04-14 22:12:26,523] TC_04_UpdateShoppingCart - Step 03: Verify Product is added successfully
+<br/>
+[INFO ] [2021-04-14 22:12:26,612] TC_04_UpdateShoppingCart - Step 04: Click to 'Shopping cart' link
+<br/>
+[INFO ] [2021-04-14 22:12:28,364] TC_04_UpdateShoppingCart - Step 05: Verify Product's Name is displayed
+<br/>
+[INFO ] [2021-04-14 22:12:28,457]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:28,460] TC_04_UpdateShoppingCart - Step 06: Verify Product's Price is correct
+<br/>
+[INFO ] [2021-04-14 22:12:31,603]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:31,608] TC_04_UpdateShoppingCart - Step 07: Verify Product's quantity is correct
+<br/>
+[INFO ] [2021-04-14 22:12:34,801]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:34,807] TC_04_UpdateShoppingCart - Step 08: Verify Product's total price is correct
+<br/>
+[INFO ] [2021-04-14 22:12:37,974]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:37,979] TC_04_UpdateShoppingCart - Step 09: Update the Product's quantity
+<br/>
+[INFO ] [2021-04-14 22:12:39,097] TC_04_UpdateShoppingCart - Step 10: Click to 'Update shopping cart' button
+<br/>
+[INFO ] [2021-04-14 22:12:41,116] TC_04_UpdateShoppingCart - Step 11: Verify the Product's total price after updating quantity
+<br/>
+[INFO ] [2021-04-14 22:12:44,218]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:44,223] TC_04_UpdateShoppingCart - Step 11: Clear the Product in Shopping cart
+<br/>
+[INFO ] [2021-04-14 22:12:48,592] TC_04_UpdateShoppingCart - Step 12: Verify delete Product successfully
+<br/>
+[INFO ] [2021-04-14 22:12:48,674]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:54,718]  -------------------------- PASSED -------------------------- 
+<br/>
+[INFO ] [2021-04-14 22:12:54,718] TC_04_UpdateShoppingCart - Step 13: Back to the Home page
+<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>com.nopcommerce.others.Others_04_Order@5db6b9cd</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nopcommerce.others.Others_04_Order.TC_06_CheckOutOrderProductByCreditCard()'><b>TC_06_CheckOutOrderProductByCreditCard</b><br>Test class: com.nopcommerce.others.Others_04_Order</td>
+<td><div><pre>java.lang.Throwable: Method Others_04_Order.TC_06_CheckOutOrderProductByCreditCard()[pri:0, instance:com.nopcommerce.others.Others_04_Order@5db6b9cd] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace545394160", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace545394160'><pre>java.lang.Throwable: Method Others_04_Order.TC_06_CheckOutOrderProductByCreditCard()[pri:0, instance:com.nopcommerce.others.Others_04_Order@5db6b9cd] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.nopcommerce.others.Others_04_Order.TC_07_ReOrderProduct()'><b>TC_07_ReOrderProduct</b><br>Test class: com.nopcommerce.others.Others_04_Order</td>
+<td><div><pre>java.lang.Throwable: Method Others_04_Order.TC_07_ReOrderProduct()[pri:0, instance:com.nopcommerce.others.Others_04_Order@5db6b9cd] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace542202332", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace542202332'><pre>java.lang.Throwable: Method Others_04_Order.TC_07_ReOrderProduct()[pri:0, instance:com.nopcommerce.others.Others_04_Order@5db6b9cd] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+</body>
+</html>

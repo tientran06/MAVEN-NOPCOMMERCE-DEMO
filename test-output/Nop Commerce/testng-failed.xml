@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [Nop Commerce]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="url" value="https://demo.nopcommerce.com/"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="commons.MethodListener"/>
+    <listener class-name="reportConfig.ExtentTestListenerVersion4"/>
+  </listeners>
+  <test thread-count="2" name="Run on CHROME(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.nopcommerce.others.Others_04_Order">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="TC_01_AddProductToCartWithDetail"/>
+          <include name="TC_03_RemoveFromCart"/>
+          <include name="TC_05_CheckOutOrderProductByCheque"/>
+          <include name="TC_02_EditProductInShoppingCart"/>
+          <include name="TC_06_CheckOutOrderProductByCreditCard"/>
+          <include name="afterClass"/>
+          <include name="TC_07_ReOrderProduct"/>
+          <include name="TC_04_UpdateShoppingCart"/>
+        </methods>
+      </class> <!-- com.nopcommerce.others.Others_04_Order -->
+    </classes>
+  </test> <!-- Run on CHROME(failed) -->
+</suite> <!-- Failed suite [Nop Commerce] -->

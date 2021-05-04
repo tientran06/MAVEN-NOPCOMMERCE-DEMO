@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on CHROME"
+           tests="7"
+           failures="1"
+           errors="0"
+           skipped="2"
+           time="170.818">
+  <properties />
+            <testcase name="TC_05_CheckOutOrderProductByCheque" time="50.400" classname="com.nopcommerce.others.Others_04_Order">
+                <failure type="org.openqa.selenium.WebDriverException"
+                  message="java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:11206
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ADMIN&apos;, ip: &apos;192.168.44.114&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
+Driver info: driver.version: RemoteWebDriver"
+              >
+<![CDATA[org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:11206
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.44.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: driver.version: RemoteWebDriver
+  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+  org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+  org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+  commons.AbstractPage.findElementByXpath(AbstractPage.java:78)
+  commons.AbstractPage.selectDefaultDropdownListByVisibleText(AbstractPage.java:494)
+  commons.AbstractPage.selectNopCommerceDropdownListByName(AbstractPage.java:813)
+  com.nopcommerce.others.Others_04_Order.TC_05_CheckOutOrderProductByCheque(Others_04_Order.java:380)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base/java.lang.reflect.Method.invoke(Method.java:564)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+  org.testng.SuiteRunner.run(SuiteRunner.java:364)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+  org.testng.TestNG.runSuites(TestNG.java:1049)
+  org.testng.TestNG.run(TestNG.java:1017)
+  org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+  org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+  org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:11206
+  okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
+  okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+  okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+  okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+  okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+  okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+  okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+  okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+  okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+  okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+  okhttp3.RealCall.execute(RealCall.java:77)
+  org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+  org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+  org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+  commons.AbstractPage.findElementByXpath(AbstractPage.java:78)
+  commons.AbstractPage.selectDefaultDropdownListByVisibleText(AbstractPage.java:494)
+  commons.AbstractPage.selectNopCommerceDropdownListByName(AbstractPage.java:813)
+  com.nopcommerce.others.Others_04_Order.TC_05_CheckOutOrderProductByCheque(Others_04_Order.java:380)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base/java.lang.reflect.Method.invoke(Method.java:564)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+  org.testng.SuiteRunner.run(SuiteRunner.java:364)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+  org.testng.TestNG.runSuites(TestNG.java:1049)
+  org.testng.TestNG.run(TestNG.java:1017)
+  org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+  org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+  org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Connection refused: no further information
+  java.base/sun.nio.ch.Net.pollConnect(Native Method)
+  java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660)
+  java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+  java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+  java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+  java.base/java.net.Socket.connect(Socket.java:648)
+  okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+  okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+  okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+  okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+  okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+  okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+  okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+  okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+  okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+  okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+  okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+  okhttp3.RealCall.execute(RealCall.java:77)
+  org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+  org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+  org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+  commons.AbstractPage.findElementByXpath(AbstractPage.java:78)
+  commons.AbstractPage.selectDefaultDropdownListByVisibleText(AbstractPage.java:494)
+  commons.AbstractPage.selectNopCommerceDropdownListByName(AbstractPage.java:813)
+  com.nopcommerce.others.Others_04_Order.TC_05_CheckOutOrderProductByCheque(Others_04_Order.java:380)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base/java.lang.reflect.Method.invoke(Method.java:564)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+  org.testng.SuiteRunner.run(SuiteRunner.java:364)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+  org.testng.TestNG.runSuites(TestNG.java:1049)
+  org.testng.TestNG.run(TestNG.java:1017)
+  org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+  org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+  org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+      </failure>
+
+          </testcase>
+  
+            <testcase name="TC_06_CheckOutOrderProductByCreditCard" time="0.0" classname="com.nopcommerce.others.Others_04_Order">
+          <skipped />
+    </testcase>
+            <testcase name="TC_07_ReOrderProduct" time="0.0" classname="com.nopcommerce.others.Others_04_Order">
+          <skipped />
+    </testcase>
+  
+            <testcase name="TC_04_UpdateShoppingCart" time="32.786" classname="com.nopcommerce.others.Others_04_Order" />
+                <testcase name="TC_02_EditProductInShoppingCart" time="36.056" classname="com.nopcommerce.others.Others_04_Order" />
+                <testcase name="TC_01_AddProductToCartWithDetail" time="37.563" classname="com.nopcommerce.others.Others_04_Order" />
+                <testcase name="TC_03_RemoveFromCart" time="14.013" classname="com.nopcommerce.others.Others_04_Order" />
+      
+</testsuite>
