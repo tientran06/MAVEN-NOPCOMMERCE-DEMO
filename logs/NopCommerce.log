@@ -20876,3 +20876,178 @@ Driver info: driver.version: RemoteWebDriver
 [INFO ] [2021-04-17 22:28:53,103]  -------------------------- PASSED -------------------------- 
 [INFO ] [2021-04-17 22:28:53,104] OS Name = windows 10
 [INFO ] [2021-04-17 22:28:54,306] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-05-29 20:21:14,190]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:24,261] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-05-29 20:21:27,195]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:29,911] TC_01_SortWithNameAscending - Step 01: Select item 'Name: A to Z' from DropDown list
+[INFO ] [2021-05-29 20:21:32,056] TC_01_SortWithNameAscending - Step 02: Verify Product Names are sorted Ascending
+[INFO ] [2021-05-29 20:21:32,181]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:33,102] TC_02_SortWithNameDescending - Step 01: Select item 'Name: Z to A' from DropDown list
+[INFO ] [2021-05-29 20:21:35,224] TC_02_SortWithNameDescending - Step 02:Verify Product Names are sorted Descending
+[INFO ] [2021-05-29 20:21:35,316]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:36,627] TC_03_SortWithPriceLowToHigh - Step 01: Select item 'Price: Low to High' from DropDown list
+[INFO ] [2021-05-29 20:21:38,765] TC_03_SortWithPriceLowToHigh - Step 02: Verify the Product prices are sorted Ascending
+[INFO ] [2021-05-29 20:21:38,887]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:39,840] TC_04_SortWithPriceHighToLow - Step 01: Select item 'Price: High to Low' from DropDown List
+[INFO ] [2021-05-29 20:21:41,990] TC_04_SortWithPriceHighToLow - Step 02: Verify Products Prices are sorted Descending
+[INFO ] [2021-05-29 20:21:42,112]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:42,832] TC_05_DisplayWith3ProductFor1Page - Step 01: Select pagezise '3' from Dropdown List
+[INFO ] [2021-05-29 20:21:44,987] TC_05_DisplayWith3ProductFor1Page - Step 02: Verify Products are displayed less or equal 3 
+[INFO ] [2021-05-29 20:21:44,998]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:44,998] TC_05_DisplayWith3ProductFor1Page - Step 03: Verify paging (Next icon) is displayed on Page number 1
+[INFO ] [2021-05-29 20:21:45,065]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:45,120]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:45,120] TC_05_DisplayWith3ProductFor1Page - Step 04: Click to page number 2
+[INFO ] [2021-05-29 20:21:47,268] TC_05_DisplayWith3ProductFor1Page - Step 05: Verify page (Next icon) is undisplayed and (Previous icon) is displayed on Page number 2
+[INFO ] [2021-05-29 20:21:47,331]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:53,499]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:53,554]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:56,281] TC_06_DisplayWith6ProductFor1Page - Step 01: Select pagezise '6' from Dropdown List
+[INFO ] [2021-05-29 20:21:58,378] TC_06_DisplayWith6ProductFor1Page - Step 02: Verify Products are displayed less or equal 6
+[INFO ] [2021-05-29 20:21:58,420]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:21:58,420] TC_06_DisplayWith6ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-05-29 20:22:04,497]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:22:05,838] TC_07_DisplayWith9ProductFor1Page - Step 01: Select pagezise '9' from Dropdown List
+[INFO ] [2021-05-29 20:22:08,021] TC_07_DisplayWith9ProductFor1Page - Step 02: Verify Products are displayed less or equal 9
+[INFO ] [2021-05-29 20:22:08,049]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:22:08,050] TC_07_DisplayWith9ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-05-29 20:22:14,159]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-05-29 20:22:14,160] OS Name = windows 10
+[INFO ] [2021-05-29 20:22:15,176] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-06-06 20:42:48,538]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:42:59,705] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-06-06 20:43:16,764]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:43:25,283] TC_01_SortWithNameAscending - Step 01: Select item 'Name: A to Z' from DropDown list
+[INFO ] [2021-06-06 20:43:27,454] TC_01_SortWithNameAscending - Step 02: Verify Product Names are sorted Ascending
+[INFO ] [2021-06-06 20:43:27,587]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:43:29,345] TC_02_SortWithNameDescending - Step 01: Select item 'Name: Z to A' from DropDown list
+[INFO ] [2021-06-06 20:43:31,523] TC_02_SortWithNameDescending - Step 02:Verify Product Names are sorted Descending
+[INFO ] [2021-06-06 20:43:31,626]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:43:33,019] TC_03_SortWithPriceLowToHigh - Step 01: Select item 'Price: Low to High' from DropDown list
+[INFO ] [2021-06-06 20:43:35,172] TC_03_SortWithPriceLowToHigh - Step 02: Verify the Product prices are sorted Ascending
+[INFO ] [2021-06-06 20:43:35,290]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:43:36,240] TC_04_SortWithPriceHighToLow - Step 01: Select item 'Price: High to Low' from DropDown List
+[INFO ] [2021-06-06 20:43:38,378] TC_04_SortWithPriceHighToLow - Step 02: Verify Products Prices are sorted Descending
+[INFO ] [2021-06-06 20:43:38,521]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:43:39,520] TC_05_DisplayWith3ProductFor1Page - Step 01: Select pagezise '3' from Dropdown List
+[INFO ] [2021-06-06 20:43:41,655] TC_05_DisplayWith3ProductFor1Page - Step 02: Verify Products are displayed less or equal 3 
+[INFO ] [2021-06-06 20:43:41,665]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:43:41,665] TC_05_DisplayWith3ProductFor1Page - Step 03: Verify paging (Next icon) is displayed on Page number 1
+[INFO ] [2021-06-06 20:43:41,724]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:43:41,799]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:43:41,799] TC_05_DisplayWith3ProductFor1Page - Step 04: Click to page number 2
+[INFO ] [2021-06-06 20:43:43,959] TC_05_DisplayWith3ProductFor1Page - Step 05: Verify page (Next icon) is undisplayed and (Previous icon) is displayed on Page number 2
+[INFO ] [2021-06-06 20:43:44,014]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:43:50,135]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:43:50,189]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:43:51,771] TC_06_DisplayWith6ProductFor1Page - Step 01: Select pagezise '6' from Dropdown List
+[INFO ] [2021-06-06 20:43:53,854] TC_06_DisplayWith6ProductFor1Page - Step 02: Verify Products are displayed less or equal 6
+[INFO ] [2021-06-06 20:43:53,866]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:43:53,867] TC_06_DisplayWith6ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-06-06 20:43:59,949]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:44:01,066] TC_07_DisplayWith9ProductFor1Page - Step 01: Select pagezise '9' from Dropdown List
+[INFO ] [2021-06-06 20:44:03,198] TC_07_DisplayWith9ProductFor1Page - Step 02: Verify Products are displayed less or equal 9
+[INFO ] [2021-06-06 20:44:03,209]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:44:03,209] TC_07_DisplayWith9ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-06-06 20:44:09,331]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 20:44:09,332] OS Name = windows 10
+[INFO ] [2021-06-06 20:44:10,420] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-06-06 21:50:41,138]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:50:52,637] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-06-06 21:50:58,462]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:05,672] TC_01_SortWithNameAscending - Step 01: Select item 'Name: A to Z' from DropDown list
+[INFO ] [2021-06-06 21:51:07,812] TC_01_SortWithNameAscending - Step 02: Verify Product Names are sorted Ascending
+[INFO ] [2021-06-06 21:51:07,989]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:09,304] TC_02_SortWithNameDescending - Step 01: Select item 'Name: Z to A' from DropDown list
+[INFO ] [2021-06-06 21:51:11,421] TC_02_SortWithNameDescending - Step 02:Verify Product Names are sorted Descending
+[INFO ] [2021-06-06 21:51:11,595]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:13,164] TC_03_SortWithPriceLowToHigh - Step 01: Select item 'Price: Low to High' from DropDown list
+[INFO ] [2021-06-06 21:51:15,433] TC_03_SortWithPriceLowToHigh - Step 02: Verify the Product prices are sorted Ascending
+[INFO ] [2021-06-06 21:51:15,746]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:17,515] TC_04_SortWithPriceHighToLow - Step 01: Select item 'Price: High to Low' from DropDown List
+[INFO ] [2021-06-06 21:51:19,875] TC_04_SortWithPriceHighToLow - Step 02: Verify Products Prices are sorted Descending
+[INFO ] [2021-06-06 21:51:20,073]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:21,775] TC_05_DisplayWith3ProductFor1Page - Step 01: Select pagezise '3' from Dropdown List
+[INFO ] [2021-06-06 21:51:23,979] TC_05_DisplayWith3ProductFor1Page - Step 02: Verify Products are displayed less or equal 3 
+[INFO ] [2021-06-06 21:51:23,996]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:23,997] TC_05_DisplayWith3ProductFor1Page - Step 03: Verify paging (Next icon) is displayed on Page number 1
+[INFO ] [2021-06-06 21:51:24,072]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:24,148]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:24,148] TC_05_DisplayWith3ProductFor1Page - Step 04: Click to page number 2
+[INFO ] [2021-06-06 21:51:26,371] TC_05_DisplayWith3ProductFor1Page - Step 05: Verify page (Next icon) is undisplayed and (Previous icon) is displayed on Page number 2
+[INFO ] [2021-06-06 21:51:26,449]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:32,526]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:32,600]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:35,912] TC_06_DisplayWith6ProductFor1Page - Step 01: Select pagezise '6' from Dropdown List
+[INFO ] [2021-06-06 21:51:38,007] TC_06_DisplayWith6ProductFor1Page - Step 02: Verify Products are displayed less or equal 6
+[INFO ] [2021-06-06 21:51:38,038]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:38,039] TC_06_DisplayWith6ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-06-06 21:51:44,148]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:46,003] TC_07_DisplayWith9ProductFor1Page - Step 01: Select pagezise '9' from Dropdown List
+[INFO ] [2021-06-06 21:51:48,157] TC_07_DisplayWith9ProductFor1Page - Step 02: Verify Products are displayed less or equal 9
+[INFO ] [2021-06-06 21:51:48,187]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:48,188] TC_07_DisplayWith9ProductFor1Page - Step 03: Verify Page is not displayed
+[INFO ] [2021-06-06 21:51:54,317]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 21:51:54,317] OS Name = windows 10
+[INFO ] [2021-06-06 21:51:55,588] ---------------------- QUIT BROWSER SUCCESS ----------------------
+[INFO ] [2021-06-06 22:41:06,653] OS Name = windows 10
+[INFO ] [2021-06-06 22:41:06,666] Cannot invoke "Object.toString()" because "driver" is null
+[INFO ] [2021-06-06 22:45:06,856]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-06 22:45:14,136] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-06-06 22:45:34,486] OS Name = windows 10
+[INFO ] [2021-06-06 22:45:34,490] no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=91.0.4472.77)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.44.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54449}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: de3a73625a9f513b8d56df9f40467298
+[INFO ] [2021-06-06 23:54:55,719] OS Name = windows 10
+[INFO ] [2021-06-06 23:54:55,722] Cannot invoke "Object.toString()" because "driver" is null
+[INFO ] [2021-06-07 00:14:59,804]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-07 00:15:06,303] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-06-07 00:15:26,760] OS Name = windows 10
+[INFO ] [2021-06-07 00:15:26,778] no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=91.0.4472.77)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.44.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52067}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ed1908ce238054d188131bfa0cd7a9f
+[INFO ] [2021-06-07 00:17:29,985]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-07 00:17:38,010] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-06-07 00:17:58,499] OS Name = windows 10
+[INFO ] [2021-06-07 00:17:58,507] no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=91.0.4472.77)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.44.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54772}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e53cded357e5ff23a38a4c531c9e601b
+[INFO ] [2021-06-07 00:24:04,764]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-07 00:24:10,113] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-06-07 00:24:44,246] OS Name = windows 10
+[INFO ] [2021-06-07 00:24:56,369] chrome not reachable
+  (Session info: chrome=91.0.4472.77)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.44.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63175}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f352763af61243d74b980b11e3c29166
+[INFO ] [2021-06-07 00:31:39,682]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-07 00:31:46,190] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-06-07 00:32:06,348] OS Name = windows 10
+[INFO ] [2021-06-07 00:32:06,365] no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=91.0.4472.77)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ADMIN', ip: '192.168.44.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.77, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63420}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: aab22cdcec67852e61ba0663e5728485
+[INFO ] [2021-06-07 00:44:05,371] Pre-conditions: Login to the System and go to My Account page
+[INFO ] [2021-06-07 00:44:45,569] OS Name = windows 10
+[INFO ] [2021-06-07 00:44:46,513] ---------------------- QUIT BROWSER SUCCESS ----------------------

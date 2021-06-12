@@ -6,11 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="UnifiMoney" />
         <module name="MAVEN-NOPCOMMERCE-DEMO" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Aspire" target="1.5" />
       <module name="MAVEN-NOPCOMMERCE-DEMO" target="1.8" />
+      <module name="MAVEN-NOPCOMMERCE-DEMO (1)" target="11.0" />
+      <module name="UnifiMoney" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

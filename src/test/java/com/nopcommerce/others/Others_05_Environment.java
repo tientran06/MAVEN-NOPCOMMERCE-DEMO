@@ -2,6 +2,9 @@ package com.nopcommerce.others;
 
 import com.nopcommerce.common.Common_01_RegisterUser;
 import commons.AbstractTest;
+import commons.Environment;
+
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import pageObjects.nopcommerce.HomePageObject;
@@ -9,16 +12,29 @@ import pageObjects.nopcommerce.LoginPageObject;
 import pageObjects.nopcommerce.NoteBooksPageObject;
 import pageObjects.nopcommerce.PageGeneratorManager;
 
-public class Others_05_SortAndPaging extends AbstractTest {
+public class Others_05_Environment extends AbstractTest {
 
 	private WebDriver driver;
 	private String email, password;
 	private LoginPageObject loginPage;
+	Environment env;
 
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
+		String environmentName = System.getProperty("environment");
+		
+		System.out.println("GIÁ TRỊ LẤY RA TỪ COMMAND LINE (MAVEN) IS" + environmentName.toLowerCase());
+		
+		ConfigFactory.setProperty("environment", environmentName.toLowerCase());
+		env = ConfigFactory.create(Environment.class);
+		
+		System.out.println("URL is" + env.url());
+		System.out.println("DB Name is" + env.getDBHostName());
+		System.out.println("User Name is" + env.getDBUserName());
+		System.out.println("Password is" + env.getDBPassword());
+		
+		driver = getBrowserDriver(browserName, env.url());
 		homePage = PageGeneratorManager.getHomePage(driver);
 
 		email = Common_01_RegisterUser.email;

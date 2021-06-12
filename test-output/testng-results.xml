@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="7" passed="0" failed="0" skipped="7">
   <reporter-output>
     <line>
-      <![CDATA[[INFO ] [2021-04-14 23:02:42,446] OS Name = windows 10
+      <![CDATA[[INFO ] [2021-06-06 23:54:55,719] OS Name = windows 10
 ]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-04-14 23:02:42,448] Cannot invoke "Object.toString()" because "driver" is null
+      <![CDATA[[INFO ] [2021-06-06 23:54:55,722] Cannot invoke "Object.toString()" because "driver" is null
 ]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-04-14T16:02:42Z" name="Default suite" finished-at="2021-04-14T16:02:42Z" duration-ms="158">
+  <suite started-at="2021-06-06T16:54:55Z" name="Default suite" finished-at="2021-06-06T16:54:55Z" duration-ms="111">
     <groups>
     </groups>
-    <test started-at="2021-04-14T16:02:42Z" name="Default test" finished-at="2021-04-14T16:02:42Z" duration-ms="158">
-      <class name="com.nopcommerce.others.Others_04_Order">
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40]" started-at="2021-04-14T16:02:42Z" name="beforeClass" finished-at="2021-04-14T16:02:42Z" duration-ms="0" status="FAIL">
+    <test started-at="2021-06-06T16:54:55Z" name="Default test" finished-at="2021-06-06T16:54:55Z" duration-ms="111">
+      <class name="com.nopcommerce.others.Others_05_Environment">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="beforeClass" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="FAIL">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--1549585228\testng-customsuite.xml]]>
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--1549585228\testng-customsuite.xml
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:290)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
 at org.testng.internal.Parameters.createParameters(Parameters.java:620)
@@ -55,21 +55,21 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40]" started-at="2021-04-14T16:02:42Z" name="beforeMethod" finished-at="2021-04-14T16:02:42Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="beforeMethod" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TC_01_AddProductToCartWithDetail()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40]" started-at="2021-04-14T16:02:42Z" name="TC_01_AddProductToCartWithDetail" finished-at="2021-04-14T16:02:42Z" duration-ms="0" status="SKIP">
+        <test-method signature="TC_01_SortWithNameAscending()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="TC_01_SortWithNameAscending" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--1549585228\testng-customsuite.xml]]>
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--1549585228\testng-customsuite.xml
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:290)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
 at org.testng.internal.Parameters.createParameters(Parameters.java:620)
@@ -98,17 +98,30 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_01_AddProductToCartWithDetail -->
-        <test-method signature="TC_02_EditProductInShoppingCart()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40]" started-at="2021-04-14T16:02:42Z" name="TC_02_EditProductInShoppingCart" finished-at="2021-04-14T16:02:42Z" depends-on-methods="com.nopcommerce.others.Others_04_Order.TC_01_AddProductToCartWithDetail" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
+        </test-method> <!-- TC_01_SortWithNameAscending -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="beforeMethod" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="TC_02_SortWithNameDescending()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="TC_02_SortWithNameDescending" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Method Others_04_Order.TC_02_EditProductInShoppingCart()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40] depends on not successfully finished methods]]>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Others_04_Order.TC_02_EditProductInShoppingCart()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -126,20 +139,33 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_02_EditProductInShoppingCart -->
-        <test-method signature="TC_03_RemoveFromCart()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40]" started-at="2021-04-14T16:02:42Z" name="TC_03_RemoveFromCart" finished-at="2021-04-14T16:02:42Z" depends-on-methods="com.nopcommerce.others.Others_04_Order.TC_02_EditProductInShoppingCart" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
+        </test-method> <!-- TC_02_SortWithNameDescending -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="beforeMethod" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="TC_03_SortWithPriceLowToHigh()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="TC_03_SortWithPriceLowToHigh" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Method Others_04_Order.TC_03_RemoveFromCart()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40] depends on not successfully finished methods]]>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Others_04_Order.TC_03_RemoveFromCart()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -157,20 +183,33 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_03_RemoveFromCart -->
-        <test-method signature="TC_04_UpdateShoppingCart()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40]" started-at="2021-04-14T16:02:42Z" name="TC_04_UpdateShoppingCart" finished-at="2021-04-14T16:02:42Z" depends-on-methods="com.nopcommerce.others.Others_04_Order.TC_03_RemoveFromCart" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
+        </test-method> <!-- TC_03_SortWithPriceLowToHigh -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="beforeMethod" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="TC_04_SortWithPriceHighToLow()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="TC_04_SortWithPriceHighToLow" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Method Others_04_Order.TC_04_UpdateShoppingCart()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40] depends on not successfully finished methods]]>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Others_04_Order.TC_04_UpdateShoppingCart()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -188,20 +227,33 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_04_UpdateShoppingCart -->
-        <test-method signature="TC_05_CheckOutOrderProductByCheque()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40]" started-at="2021-04-14T16:02:42Z" name="TC_05_CheckOutOrderProductByCheque" finished-at="2021-04-14T16:02:42Z" depends-on-methods="com.nopcommerce.others.Others_04_Order.TC_04_UpdateShoppingCart" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
+        </test-method> <!-- TC_04_SortWithPriceHighToLow -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="beforeMethod" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="TC_05_DisplayWith3ProductFor1Page()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="TC_05_DisplayWith3ProductFor1Page" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Method Others_04_Order.TC_05_CheckOutOrderProductByCheque()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40] depends on not successfully finished methods]]>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Others_04_Order.TC_05_CheckOutOrderProductByCheque()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -219,20 +271,33 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_05_CheckOutOrderProductByCheque -->
-        <test-method signature="TC_06_CheckOutOrderProductByCreditCard()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40]" started-at="2021-04-14T16:02:42Z" name="TC_06_CheckOutOrderProductByCreditCard" finished-at="2021-04-14T16:02:42Z" depends-on-methods="com.nopcommerce.others.Others_04_Order.TC_05_CheckOutOrderProductByCheque" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
+        </test-method> <!-- TC_05_DisplayWith3ProductFor1Page -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="beforeMethod" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="TC_06_DisplayWith6ProductFor1Page()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="TC_06_DisplayWith6ProductFor1Page" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Method Others_04_Order.TC_06_CheckOutOrderProductByCreditCard()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40] depends on not successfully finished methods]]>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Others_04_Order.TC_06_CheckOutOrderProductByCreditCard()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -250,20 +315,33 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_06_CheckOutOrderProductByCreditCard -->
-        <test-method signature="TC_07_ReOrderProduct()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40]" started-at="2021-04-14T16:02:42Z" name="TC_07_ReOrderProduct" finished-at="2021-04-14T16:02:42Z" depends-on-methods="com.nopcommerce.others.Others_04_Order.TC_06_CheckOutOrderProductByCreditCard" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
+        </test-method> <!-- TC_06_DisplayWith6ProductFor1Page -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="beforeMethod" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="TC_07_DisplayWith9ProductFor1Page()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="TC_07_DisplayWith9ProductFor1Page" finished-at="2021-06-06T16:54:55Z" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Method Others_04_Order.TC_07_ReOrderProduct()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40] depends on not successfully finished methods]]>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Others_04_Order.TC_07_ReOrderProduct()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
+in C:\Users\Admin\AppData\Local\Temp\testng-eclipse--801359561\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -281,23 +359,23 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_07_ReOrderProduct -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.nopcommerce.others.Others_04_Order@e350b40]" started-at="2021-04-14T16:02:42Z" name="afterClass" finished-at="2021-04-14T16:02:42Z" duration-ms="7" status="PASS">
+        </test-method> <!-- TC_07_DisplayWith9ProductFor1Page -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.nopcommerce.others.Others_05_Environment@41a0aa7d]" started-at="2021-06-06T16:54:55Z" name="afterClass" finished-at="2021-06-06T16:54:55Z" duration-ms="9" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[[INFO ] [2021-04-14 23:02:42,446] OS Name = windows 10
+              <![CDATA[[INFO ] [2021-06-06 23:54:55,719] OS Name = windows 10
 ]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-04-14 23:02:42,448] Cannot invoke "Object.toString()" because "driver" is null
+              <![CDATA[[INFO ] [2021-06-06 23:54:55,722] Cannot invoke "Object.toString()" because "driver" is null
 ]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.nopcommerce.others.Others_04_Order -->
+      </class> <!-- com.nopcommerce.others.Others_05_Environment -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

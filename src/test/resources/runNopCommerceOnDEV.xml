@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Nop Commerce" parallel="none" thread-count="1">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="commons.MethodListener" />
+		<listener class-name="reportConfig.ExtentTestListenerVersion4" />
+	</listeners>
+	<parameter name="browser" value="chrome" />
+	<parameter name="url" value="https://demo.nopcommerce.com/" />
+
+	<test name="Run on CHROME">
+		<parameter name="browser" value="chrome" />
+		<!-- <packages> <package name="com.nopcommerce.search"/> </packages> -->
+		<classes>
+
+			<class name="com.nopcommerce.common.Common_01_RegisterUser"/>
+			<class name="com.nopcommerce.others.Others_05_SortAndPaging"/>
+		</classes>
+
+	</test>
+</suite> 

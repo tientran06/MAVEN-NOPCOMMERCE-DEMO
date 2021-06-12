@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MAVEN-NOPCOMMERCE-DEMO.iml" filepath="$PROJECT_DIR$/MAVEN-NOPCOMMERCE-DEMO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../UnifiMoney/UnifiMoney.iml" filepath="$PROJECT_DIR$/../UnifiMoney/UnifiMoney.iml" />
     </modules>
   </component>
 </project>
